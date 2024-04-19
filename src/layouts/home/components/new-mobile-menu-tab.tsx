@@ -21,7 +21,7 @@ export default function MobileMenuTab({ categories }: { categories: ProductCateg
             </div>
             {categories.map((category) => (
                 currentTab === category.name && <div key={category.id} className="pb-2 text-left text-sm font-medium">
-                    <div className="divide-y divide-grey-6 text-grey-83">
+                    <div className="divide-y divide-grey-17 text-grey-83">
                         {category.category_children.map((child_cat) => (
                             <MobileMenuAction key={child_cat.id} className="py-2">
                                 <LocalizedClientLink href={`/category/${child_cat.handle}`} className="block w-full hover:bg-grey-20/80 active:bg-grey-19 px-4 py-3 rounded-sm">
