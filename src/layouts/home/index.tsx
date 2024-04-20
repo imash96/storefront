@@ -6,7 +6,7 @@ import CartMenu from "./templates/cart-menu"
 import { enrichLineItems, retrieveCart } from "@modules/cart/actions"
 import { LineItem } from "@medusajs/medusa"
 import Footer from "./templates/footer"
-import MobileMenu from "./templates/mobile-menu-new"
+import MobileMenu from "./templates/mobile-menu"
 
 const fetchCart = async () => {
     const cart = await retrieveCart()

@@ -8,7 +8,7 @@ import LocalizedClientLink from "@modules/common/localized-client-link";
 import { Suspense } from "react";
 import ThemeButton from "./theme-button";
 import { CartButton } from "./cart-button";
-import { ProductCategory } from "@medusajs/medusa"
+import { ProductCategory } from "types/medusa"
 import Image from "next/image";
 import { getRandomCategory, getRandomStyle } from "@libs/utils/get-random";
 
@@ -27,19 +27,19 @@ export default async function HeaderContent() {
     new_category[0] = {
         ...main_category[0],
         category_children: getRandomCategory(main_category[0].category_children, 7)
-    } as ProductCategory
+    }
     new_category[1] = {
         ...main_category[1],
         category_children: getRandomCategory(main_category[1].category_children, 7)
-    } as ProductCategory
+    }
     new_style[0] = {
         ...main_category[0],
         category_children: getRandomStyle(main_category[0].category_children[0].category_children[2], 4)
-    } as ProductCategory
+    }
     new_style[1] = {
         ...main_category[1],
         category_children: getRandomStyle(main_category[1].category_children[0].category_children[3], 4)
-    } as ProductCategory
+    }
     return (
         <>
             <div className="ml-4 flex xm:ml-0">
@@ -97,10 +97,10 @@ export default async function HeaderContent() {
                             </div>
                         </li>
                     ))}
-                    {pages.map((page) => (
-                        <li key={page.name} className="relative flex">
-                            <LocalizedClientLink href={page.href} className="flex border-transparent relative z-10 -mb-px items-center hover:text-blue-1 hover:border-blue-1 hover:border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out">
-                                {page.name}
+                    {Object.entries(pages).map(([name, href]) => (
+                        <li key={name} className="relative flex">
+                            <LocalizedClientLink href={href} className="flex border-transparent relative z-10 -mb-px items-center hover:text-blue-1 hover:border-blue-1 hover:border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out">
+                                {name}
                             </LocalizedClientLink>
                         </li>
                     ))}
@@ -133,15 +133,15 @@ export default async function HeaderContent() {
     )
 }
 
-const pages = [
-    { name: 'KID', href: '/category/kid' },
-    { name: 'PILLOW', href: '/category/pillow' },
-    { name: 'ACCESSORIES', href: '/category/accessories' },
-    { name: 'TRAVEL BAGS', href: '/category/travel-bags' },
-]
+export const pages = {
+    "KID": "/category/kid",
+    "PILLOW": "/category/pillow",
+    "ACCESSORIES": "/category/accessories",
+    "TRAVEL BAGS": "/category/travel-bags",
+}
 
 
-type featuresType = {
+export type featuresType = {
     [key: string]: {
         id: string,
         name: string;
@@ -152,7 +152,7 @@ type featuresType = {
 }
 
 export const features = {
-    "MEN": [
+    "Men": [
         {
             id: 'men-cat-03',
             name: 'New Arrivals',
@@ -170,7 +170,7 @@ export const features = {
         }
     ],
 
-    "WOMEN": [
+    "Women": [
         {
             id: 'women-cat-03',
             name: 'New Arrivals',

@@ -1,6 +1,8 @@
-import { Region as MedusaRegion, ProductVariant } from "@medusajs/medusa"
+import { Region as MedusaRegion, ProductVariant, ProductCategory as MedusaProductCategory } from "@medusajs/medusa"
 
 export type Variant = Omit<ProductVariant, "beforeInsert">
+
+export type ProductCategory = Omit<MedusaProductCategory, "beforeInsert">
 
 export interface Region extends Omit<MedusaRegion, "beforeInsert"> { }
 
