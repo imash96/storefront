@@ -25,10 +25,10 @@ export default function MobileMenuTab({ categories }: { categories: ProductCateg
                 currentTab === category.name && <div key={category.id} className="text-left text-sm font-medium">
                     <div className="grid grid-cols-2 gap-x-4 p-4">
                         {(features as featuresType)[category.name].map((item) => (
-                            <div key={item.id} className="group aspect-w-1 aspect-h-1 relative overflow-hidden rounded-md bg-gray-18 ">
+                            <div key={item.id} className="group aspect-w-1 aspect-h-1 relative overflow-hidden rounded-md bg-gray-18 shadow-md">
                                 <Image src={item.imageSrc} width={100} height={100} alt={item.imageAlt} className="object-cover object-center group-hover:opacity-75 h-full w-full" />
                                 <div className="flex flex-col justify-end">
-                                    <div className="bg-white bg-opacity-60 p-3 text-base sm:text-sm">
+                                    <div className="bg-grey-22 bg-opacity-60 p-3 text-sm sm:text-xs">
                                         <LocalizedClientLink href={item.href} className="block font-medium text-gray-82">
                                             <span className="absolute inset-0" aria-hidden="true" />
                                             {item.name}
