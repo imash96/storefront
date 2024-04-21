@@ -1,14 +1,14 @@
-import ChevronDownIcon from "@icons/chevron-down";
+import ChevronDown from "@icons/chevron-down";
 import LogoIcon from "@icons/logo";
+import { medusaClient } from "@libs/config";
+import LocalizedClientLink from "@modules/common/localized-client-link";
+import { ProductCategory } from "types/medusa"
 import MagnifyingGlassIcon from "@icons/magnifying-glass";
 import ShoppingCartIcon from "@icons/shopping-cart";
 import UserIcon from "@icons/user";
-import { medusaClient } from "@libs/config";
-import LocalizedClientLink from "@modules/common/localized-client-link";
 import { Suspense } from "react";
 import ThemeButton from "./theme-button";
-import { CartButton } from "./cart-button";
-import { ProductCategory } from "types/medusa"
+import CartButton from "./cart-button";
 import Image from "next/image";
 import { getRandomCategory, getRandomStyle } from "@libs/utils/get-random";
 
@@ -51,12 +51,12 @@ export default async function HeaderContent() {
             <div className="hidden xm:ml-8 xm:block xm:self-stretch">
                 <ul className="flex h-full gap-8">
                     {main_category.map((category) => (
-                        <li key={category.id} className="on-hover">
-                            <button type="button" className="flex border-transparent relative z-10 -mb-px items-center hover:text-blue-1 hover:border-blue-1 hover:border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out" aria-expanded="false">
+                        <li key={category.id} className="group flex">
+                            <button type="button" className="flex border-transparent relative z-10 -mb-px items-center pt-px text-sm font-medium transition-colors duration-200 ease-out group-hover:border-b-2 group-hover:border-blue-1 group-hover:text-blue-1" aria-expanded="false">
                                 {category.name}
-                                <ChevronDownIcon className='ml-1 h-4 w-4' aria-hidden="true" />
+                                <ChevronDown className='ml-1 h-4 w-4 group-hover:rotate-180' aria-hidden="true" />
                             </button>
-                            <div className="mega-menu absolute left-0 top-[97%] shadow-sm shadow-grey-20 bg-grey-20 border-t border-grey-16 text-sm text-left text-grey-81 mt-0.5">
+                            <div className="absolute hidden w-full left-0 top-[97%] shadow-sm shadow-grey-20 bg-grey-20 border-t border-grey-16 text-sm text-left text-grey-81 mt-0.5 group-hover:block group-hover:opacity-100 transition-opacity duration-700">
                                 <div className="mx-auto max-w-7xl p-10 grid grid-cols-2 gap-x-8 gap-y-10">
                                     <div className="grid grid-cols-2 gap-x-4">
                                         <div key='men-cat-01'>
@@ -107,12 +107,12 @@ export default async function HeaderContent() {
                 </ul>
             </div >
             <div className="ml-auto flex content-between items-center gap-3">
-                <LocalizedClientLink href="#" className="p-3 hover:text-grey-85 hover:bg-grey-19 rounded hidden xm:block cursor-pointer ">
+                <LocalizedClientLink href="#" className="header-icon hidden xm:block">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
                 </LocalizedClientLink>
 
-                <LocalizedClientLink href="/account" className="p-3 hover:text-grey-85 hover:bg-grey-19 rounded hidden md:block">
+                <LocalizedClientLink href="/account" className="header-icon hidden md:block">
                     <span className="sr-only">Account</span>
                     <UserIcon className="h-6 w-6" aria-hidden="true" />
                 </LocalizedClientLink>

@@ -16,9 +16,7 @@ export default function RootLayout({ children }: Readonly<React.PropsWithChildre
     return (
         <html lang="en" data-theme={theme?.value ? theme.value : "light"}>
             <body>
-                <main className="relative">
-                    {children}
-                </main>
+                {children}
             </body>
         </html>
     );

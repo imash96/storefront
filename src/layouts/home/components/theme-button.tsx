@@ -27,7 +27,7 @@ export default function ThemeButton() {
     }
 
     return (
-        <button onClick={handleClick} className="p-3 hover:text-grey-55 hover:bg-grey-8 rounded cursor-pointer">
+        <button onClick={handleClick} className="header-icon">
             {mode === 'light' ? <DarkModeIcon className="h-6 w-6" /> : <LightModeIcon className="h-6 w-6" />}
         </button>
     )

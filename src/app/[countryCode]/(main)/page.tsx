@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import CARTBUTTON from "./button";
+import Home from "@modules/home";
 
 export const metadata: Metadata = {
   title: "Leather Lifestyle Store",
@@ -9,8 +10,11 @@ export const metadata: Metadata = {
 export default function Page({ params }: { params: { countryCode: string } }) {
   const { countryCode } = params
   return (
-    <div className="min-h-screen">
-      <CARTBUTTON countryCode={countryCode} />
-    </div>
+    <>
+      <Home />
+      <div className="min-h-screen">
+        <CARTBUTTON countryCode={countryCode} />
+      </div>
+    </>
   );
 }

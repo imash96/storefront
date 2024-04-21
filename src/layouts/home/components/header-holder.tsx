@@ -2,7 +2,6 @@
 
 import Bars3Icon from "@icons/3bar"
 import { useSlideMenu } from "@libs/contexts/use-slide-menu";
-import "@styles/header.css";
 import { useEffect, useState } from "react";
 
 export default function HeaderHolder({ children }: React.PropsWithChildren) {

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .header-icon {
+    @apply p-3 hover:text-grey-85 hover:bg-grey-19 rounded cursor-pointer
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
