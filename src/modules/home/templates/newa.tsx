@@ -20,10 +20,10 @@ export default async function NewArrival({ countryCode }: { countryCode: string 
                     <h2 id="favorites-heading" className="text-2xl font-bold tracking-tight text-grey-81">
                         New Arrivals
                     </h2>
-                    <a href="#" className="flex gap-x-1 items-center group text-sm font-medium text-indigo-1 hover:text-indigo-2">
+                    <LocalizedClientLink href="/collection/new-arrivals" className="flex gap-x-1 items-center group text-sm font-medium text-indigo-1 hover:text-indigo-2">
                         View all
                         <ArrowRight className="-rotate-45 group-hover:rotate-0" />
-                    </a>
+                    </LocalizedClientLink>
                 </div>
                 <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8">
                     {products.map(product => (

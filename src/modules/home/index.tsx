@@ -1,4 +1,5 @@
 import Category from "./templates/cats";
+import CollectionPromotion from "./templates/colp";
 import Collection from "./templates/cols";
 import Hero from "./templates/hero";
 import NewArrival from "./templates/newa";
@@ -15,6 +16,7 @@ export default function Home({ countryCode }: { countryCode: string }) {
             <Category />
             <Collection />
             <Promotion countryCode={countryCode} />
+            <CollectionPromotion />
             <NewArrival countryCode={countryCode} />
             <Testimonal />
             <PointOfDifference />
