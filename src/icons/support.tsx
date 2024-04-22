@@ -1,6 +1,6 @@
 import { IconProps } from "types/icon"
 
-const SupportIcon: React.FC<IconProps> = ({ width = 16, color, style, ...props }) => {
+const SupportIcon: React.FC<IconProps> = ({ width = 16, col, style, ...props }) => {
     return (
         <svg width={width} viewBox="0 0 100 100" {...props} >
             <circle cx={50} cy={50} r={49} fill='none' stroke='currentColor' strokeWidth={0.7} />

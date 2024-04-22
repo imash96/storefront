@@ -19,8 +19,8 @@
       "@icons/*": [ "icons/*" ],
       "@layouts/*": [ "layouts/*" ],
       "@libs/*": [ "libs/*" ],
-      "@modules/*": ["modules/*"],
-      "@styles/*": ["styles/*"],
+      "@modules/*": [ "modules/*" ],
+      "@styles/*": [ "styles/*" ],
     }
   },
   "include": [ "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts" ],

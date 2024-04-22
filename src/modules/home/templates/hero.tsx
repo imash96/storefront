@@ -20,7 +20,7 @@ const SwiperConfig: SwiperProps = {
     slidesPerView: 1,
     loop: true,
     centeredSlides: true,
-    autoplay: { delay: 9500, disableOnInteraction: true },
+    autoplay: { delay: 3500, disableOnInteraction: true },
     pagination: { enabled: true, dynamicBullets: true, type: 'bullets', clickable: true, el: '.hero-pagination' },
     navigation: { enabled: true, nextEl: '.hero-button-next', prevEl: '.hero-button-prev' },
     modules: [Autoplay, Pagination, Navigation, EffectFade],

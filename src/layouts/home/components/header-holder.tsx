@@ -15,7 +15,7 @@ export default function HeaderHolder({ children }: React.PropsWithChildren) {
         };
     });
     return (
-        <header className={`sticky top-0 z-20 hover:bg-grey-19 transition-all duration-500 ${isScrolled ? 'shadow-sm shadow-grey-7 bg-grey-19 border-b border-grey-19' : 'bg-transparent'}`}>
+        <header className={`sticky top-0 z-20 hover:bg-grey-19 transition-colors duration-500 ${isScrolled ? 'shadow-sm shadow-grey-7 bg-grey-19' : 'bg-transparent'}`}>
             <nav aria-label="nav" className="mx-auto max-w-7xl px-4 sm:px-6 xm:px-8 border-none flex h-[4.5rem] items-center text-grey-81">
                 <button type="button" onClick={mobileMenuOpen} className="rounded-md p-2 xm:hidden">
                     <Bars3Icon className="h-7 w-7" />

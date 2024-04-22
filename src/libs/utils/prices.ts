@@ -157,10 +157,7 @@ export const getVariantPrice = (
     variant: ProductVariantInfo,
     region: RegionInfo
 ) => {
-    const price = variant?.prices?.find(
-        (p) =>
-            p.currency_code.toLowerCase() === region?.currency_code?.toLowerCase()
-    )
+    const price = variant?.prices?.find((p) => p.currency_code.toLowerCase() === region?.currency_code?.toLowerCase())
 
     return price?.amount || 0
 }

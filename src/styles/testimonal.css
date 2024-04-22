@@ -1,0 +1,21 @@
+.slider_text {
+    max-width: 16rem;
+}
+
+.swiper-slide {
+    background-color: transparent;
+}
+
+.slider_text:after {
+    transform: translate(-50%) rotate(45deg);
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(var(--gray-19));
+    border-bottom: 2px solid rgb(var(--gray-17));
+    border-right: 2px solid rgb(var(--gray-17));
+    border-bottom-right-radius: 6px;
+    content: "";
+}

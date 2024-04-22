@@ -35,6 +35,7 @@ const config: Config = {
       canvas: 'rgb(var(--canvas) / <alpha-value>)',
       thumbnail: 'rgb(var(--thumbnail) / <alpha-value>)',
       grey: {
+        10: 'rgb(var(--gray-10) / <alpha-value>)',
         11: 'rgb(var(--gray-11) / <alpha-value>)',
         12: 'rgb(var(--gray-12) / <alpha-value>)',
         13: 'rgb(var(--gray-13) / <alpha-value>)',
@@ -47,6 +48,7 @@ const config: Config = {
         20: 'rgb(var(--gray-20) / <alpha-value>)',
         21: 'rgb(var(--gray-21) / <alpha-value>)',
         22: 'rgb(var(--gray-22) / <alpha-value>)',
+        23: 'rgb(var(--gray-23) / <alpha-value>)',
 
         81: 'rgb(var(--gray-81) / <alpha-value>)',
         82: 'rgb(var(--gray-82) / <alpha-value>)',

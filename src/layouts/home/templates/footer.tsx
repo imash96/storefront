@@ -4,11 +4,11 @@ import MailIcon from "@icons/mail"
 
 export default function Footer() {
     return (
-        <footer className='footer border-t border-grey-17 shadow-md shadow-grey-19 bg-grey-20' aria-labelledby="footer-heading">
+        <footer className='footer border-t border-grey-17 bg-grey-20' aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="lg:py-6 py-5 px-2 sm:px-4 sm:pb-8 md:px-6 mx-auto max-w-8xl lg:p-10 text-grey-81">
+            <div className="lg:py-6 py-5 px-2 sm:px-4 sm:pb-8 md:px-6 mx-auto max-w-7xl lg:p-10 text-grey-81">
                 <div className='grid grid-cols-1 p-4 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 gap-x-2 gap-y-8'>
                     <FooterTop title='COMPANY' footerData={footerData.company} />
                     <FooterTop title='USEFUL LINKS' footerData={footerData.useful} />

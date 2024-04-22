@@ -11,10 +11,8 @@ export default function Page({ params }: { params: { countryCode: string } }) {
   const { countryCode } = params
   return (
     <>
-      <Home />
-      <div className="min-h-screen">
-        <CARTBUTTON countryCode={countryCode} />
-      </div>
+      <Home countryCode={countryCode} />
+      {/* <CARTBUTTON countryCode={countryCode} /> */}
     </>
   );
 }
