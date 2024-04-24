@@ -11,8 +11,8 @@ export default function CartMenu({ cart }: { cart?: Omit<Cart, "beforeInsert" | 
     const { cartState, cartMenuClose } = useSlideMenu()
 
     return (
-        <div className={`fixed inset-0 z-30 ${cartState ? "animate-slide-in-cart" : "animate-slide-out-cart translate-x-full"}`}>
-            <div className={`absolute inset-0 z-30 bg-curtain transition-opacity duration-500 ease-in-out delay-300 ${cartState ? "opacity-25": "opacity-0"}`} onClick={cartMenuClose} />
+        <div className={`fixed inset-0 z-30 ${cartState ? "animate-slide-in-cart" : "animate-slide-out-cart"}`} style={{ transform: `${cartState ? 'translate(0%)' : 'translate(100%)'}` }}>
+            <div className={`absolute inset-0 z-30 bg-curtain transition-opacity duration-500 ease-in-out delay-300 ${cartState ? "opacity-25" : "opacity-0"}`} onClick={cartMenuClose} />
             <div className="absolute inset-y-0 right-0 z-40 flex w-11/12 max-w-sm border-l border-grey-16">
                 <div className="relative flex w-full h-full flex-col shadow-xl bg-scroll text-grey-81 bg-grey-20">
                     <div className="flex justify-between px-4 py-3 sticky top-0 border-b border-grey-16 bg-grey-18 z-10">

@@ -12,7 +12,7 @@ import Search from "@icons/search"
 export default function MobileMenuClient({ children, regions }: { regions: Region[] | null } & React.PropsWithChildren) {
     const { menuState, mobileMenuClose } = useSlideMenu()
     return (
-        <div className={`fixed inset-0 z-30 lg:hidden ${menuState ? "animate-slide-in-menu " : "animate-slide-out-menu -translate-x-full"}`}>
+        <div className={`fixed inset-0 z-30 lg:hidden ${menuState ? "animate-slide-in-menu " : "animate-slide-out-menu"}`} style={{ transform: `${menuState ? 'translate(0%)' : 'translate(-100%)'}` }}>
             <div className={`absolute inset-0 z-30 bg-curtain transition-opacity duration-500 ease-in-out delay-[0.35s] ${menuState ? "opacity-25" : "opacity-0"}`} onClick={mobileMenuClose} />
             <div className="absolute inset-0 z-40 flex w-11/12 sm:w-5/6 max-w-md border-r border-grey-21">
                 <div className="relative flex w-full flex-col shadow-xl bg-scroll bg-naviBg text-grey-83 bg-grey-20">
