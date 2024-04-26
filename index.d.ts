@@ -100,6 +100,9 @@ export declare module "@medusajs/medusa/dist/models/cart" {
 export declare module "@medusajs/medusa/dist/models/product-collection" {
     declare interface ProductCollection {
         thumbnail: string | null
+        alt: string | null
+        description: string | null
+        is_active: boolean
     }
 }
 
@@ -117,6 +120,7 @@ export declare module "@medusajs/medusa/dist/models/line-item" {
         is_customized: boolean
         measurement_id: string | null
         measurements: Measurement
+        comment: string | null;
     }
 }
 
@@ -132,19 +136,25 @@ export declare module "@medusajs/medusa/dist/models/product-category" {
         customattribute: string;
         thumbnail: string;
         alt: string;
-        metadata: Record<string, unknown> | null;
+        description: string | null;
     }
 }
 
 export declare module "@medusajs/medusa/dist/models/product" {
     declare interface Product {
-        customattribute: string | null
-        brand: string | null
-        gender: string | null
-        care: string | null
-        style: string | null
-        is_customizable: boolean
-        is_enhanced: boolean;
-        enhanced_desc: string | null
+        customattribute: string | null;
+        seo_description: string | null;
+        brand: string | null;
+        gender: string | null;
+        care: string | null;
+        style: string | null;
+        bullets_id: string | null;
+        bullets: ProductBullets;
+        addon_id: string | null;
+        addon: Addon | null;
+        reviews: Review[];
+        is_customizable: boolean;
+        is_feature_displays: boolean;
+        feature_displays: FeatureDisplay[];
     }
 }

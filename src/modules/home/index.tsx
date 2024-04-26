@@ -11,7 +11,7 @@ import UniqueSellingPoint from "./templates/uspt";
 export default function Home({ countryCode }: { countryCode: string }) {
     return (
         <>
-            <Hero />
+            <Hero countryCode={countryCode} />
             <UniqueSellingPoint />
             <Category />
             <Collection />

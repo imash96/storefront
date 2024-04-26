@@ -1,4 +1,5 @@
 import { medusaClient } from "@libs/config"
+import Image from "next/image"
 
 
 export default async function CollectionPromotion() {
@@ -8,7 +9,8 @@ export default async function CollectionPromotion() {
             <div className="mx-auto max-w-7xl pt-8 px-2 sm:px-4 sm:pt-12 md:px-6 lg:px-8 lg:pt-14">
                 <div className="relative overflow-hidden rounded-lg lg:h-96">
                     <div className="absolute inset-0">
-                        <img
+                        <Image
+                            fill={true}
                             src={collection.thumbnail ? collection.thumbnail : ''}
                             alt=""
                             className="h-full w-full object-cover object-center"
@@ -25,7 +27,7 @@ export default async function CollectionPromotion() {
                                 Upgrade your desk with objects that keep you organized and clear-minded.
                             </p>
                         </div>
-                        <a href="#" className="mt-6 flex flex-shrink-0 items-center justify-center rounded-md border border-white border-opacity-25 bg-white bg-opacity-0 py-3 px-4 text-base font-medium text-white hover:bg-opacity-10 sm:mt-0 sm:ml-8 lg:ml-0 lg:w-full">
+                        <a href="#" className="mt-6 flex flex-shrink-0 items-center justify-center rounded-md border border-grey-11 border-opacity-25 bg-grey-14 bg-opacity-0 py-3 px-4 text-base font-medium text-grey-81 hover:bg-opacity-10 sm:mt-0 sm:ml-8 lg:ml-0 lg:w-full">
                             View the collection
                         </a>
                     </div>

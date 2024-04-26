@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import CARTBUTTON from 'app/[countryCode]/(main)/button';
 
 const SwiperConfig: SwiperProps = {
     className: 'relative w-full h-[70vh] overflow-hidden -mt-[4.5rem]',
@@ -26,7 +27,7 @@ const SwiperConfig: SwiperProps = {
     modules: [Autoplay, Pagination, Navigation, EffectFade],
 }
 
-export default function Hero() {
+export default function Hero({ countryCode }: { countryCode: string }) {
     return (
         <Swiper {...SwiperConfig}>
             {slides.map((slide) => (
@@ -36,7 +37,7 @@ export default function Hero() {
                         <div className="swiper-slide-title-1 text-5xl">{slide.title}</div>
                         <div className="swiper-slide-title-2 text-4xl">{slide.title}</div>
                         <div className="swiper-slide-text-3 md:w-1/3">{slide.para}</div>
-                        <a href={slide.href} className="w-42 text-center rounded-md border border-grey-11 bg-button-s px-6 py-3 text-base font-medium text-grey-81 shadow-sm hover:bg-button-h">Click Here</a>
+                        <CARTBUTTON className='w-42 text-center rounded-md border border-grey-11 bg-button-s px-6 py-3 text-base font-medium text-grey-81 shadow-sm hover:bg-button-h' countryCode={countryCode} />
                     </div>
                 </SwiperSlide>
             ))}
