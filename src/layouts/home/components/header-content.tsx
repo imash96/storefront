@@ -82,7 +82,7 @@ export default async function HeaderContent() {
                                     </div>
                                     <div className="grid grid-cols-2 gap-x-4">
                                         {(features as featuresType)[category.name].map((item) => (
-                                            <LocalizedClientLink key={item.id} href={item.href} className="group relative overflow-hidden rounded-md bg-grey-20 aspect-[0.75] text-main sm:text-sm">
+                                            <LocalizedClientLink key={item.id} href={item.href} className="group relative overflow-clip rounded-md bg-grey-20 aspect-[0.75] text-main sm:text-sm">
                                                 <Image src={item.imageSrc} width={200} height={300} alt={item.imageAlt} className="object-cover object-center group-hover:opacity-75 h-full w-full" />
                                                 <div className="flex absolute bottom-0 flex-col w-full justify-end">
                                                     <div className="p-4 bg-grey-20 bg-opacity-80 text-sm">

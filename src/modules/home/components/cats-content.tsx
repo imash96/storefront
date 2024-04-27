@@ -15,7 +15,7 @@ export default async function CategoryContent() {
             {[firstHalf, secondHalf].map((categories, xIndex) => (
                 <div key={xIndex} className="grid grid-cols-1 gap-4 mt-6 md:grid-cols-3 md:grid-rows-2 lg:gap-6">
                     {categories.map((category, yIndex) => (
-                        <div key={category.id} className={`group aspect-w-2 aspect-h-1 shadow-md shadow-grey-84 overflow-hidden rounded-md md:h-full ${(0 == xIndex && 0 == yIndex || 1 == xIndex && yIndex == 1) ? "md:col-span-2 md:row-span-2" : "md:aspect-none md:relative md:h-full"}`}>
+                        <div key={category.id} className={`group aspect-w-2 aspect-h-1 shadow-md shadow-grey-84 overflow-clip rounded-md md:h-full ${(0 == xIndex && 0 == yIndex || 1 == xIndex && yIndex == 1) ? "md:col-span-2 md:row-span-2" : "md:aspect-none md:relative md:h-full"}`}>
                             <Image
                                 src={category.thumbnail} width={500} height={250} alt={category.alt}
                                 className="object-cover object-center group-hover:opacity-75 md:absolute md:inset-0 md:h-full md:w-full"

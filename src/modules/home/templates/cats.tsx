@@ -19,10 +19,10 @@ export default function Category() {
                 </div>
                 <CategoryContent />
                 <div className="mt-3 md:hidden">
-                    <a href="#" className="flex group gap-x-1 text-sm font-medium text-indigo-1 hover:text-indigo-2">
+                    <LocalizedClientLink href="/category" className="flex group gap-x-1 text-sm font-medium text-indigo-1 hover:text-indigo-2">
                         Browse all categories
                         <ArrowRight className="-rotate-45 group-hover:rotate-0" />
-                    </a>
+                    </LocalizedClientLink>
                 </div>
             </div>
         </section>

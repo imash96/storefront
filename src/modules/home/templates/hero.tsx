@@ -13,7 +13,6 @@ import 'swiper/css/pagination';
 import CARTBUTTON from 'app/[countryCode]/(main)/button';
 
 const SwiperConfig: SwiperProps = {
-    className: 'relative w-full h-[70vh] overflow-hidden -mt-[4.5rem]',
     effect: 'fade',
     fadeEffect: { crossFade: true },
     speed: 900,
@@ -29,7 +28,7 @@ const SwiperConfig: SwiperProps = {
 
 export default function Hero({ countryCode }: { countryCode: string }) {
     return (
-        <Swiper {...SwiperConfig}>
+        <Swiper {...SwiperConfig} className='relative w-full h-[70vh] !overflow-clip -mt-[4.5rem]'>
             {slides.map((slide) => (
                 <SwiperSlide key={slide.id} className="justify-center">
                     <Image fill={true} alt="model image" className="swiper-slide-image" src={slide.imageUrl} />

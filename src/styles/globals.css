@@ -39,8 +39,8 @@
   /* Works on Firefox */
   * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(var(--on)) transparent;
-    scrollbar-gutter: auto;
+    scrollbar-color: rgba(214, 214, 214) transparent;
+    scrollbar-gutter: stable;
   }
 
   /* Works on Chrome, Edge, and Safari */

@@ -2,7 +2,6 @@ import ArrowRight from "@icons/arrow-right";
 import LocalizedClientLink from "@modules/common/localized-client-link";
 import CollectionContent from "../components/cols-content";
 
-
 export default function Collection() {
     return (
         <section aria-labelledby="collection-heading" className="bg-grey-20">
@@ -12,17 +11,17 @@ export default function Collection() {
                         Shop by Collection
                         <p className="text-sm md:text-base lg:text-lg font-extralight text-grey-83">Each season, we collaborate with designers to create a new collection.</p>
                     </h2>
-                    <LocalizedClientLink href="/collection" className="hidden group text-sm font-medium self-end text-indigo-1 hover:text-indigo-2 md:flex md:gap-x-1">
+                    <LocalizedClientLink href="/collections" className="hidden group text-sm font-medium self-end text-indigo-1 hover:text-indigo-2 md:flex md:gap-x-1">
                         View all
                         <ArrowRight className="-rotate-45 group-hover:rotate-0" />
                     </LocalizedClientLink>
                 </div>
                 <CollectionContent />
                 <div className="mt-3 md:hidden">
-                    <a href="#" className="flex group gap-x-1 text-sm font-medium text-indigo-1 hover:text-indigo-2">
+                    <LocalizedClientLink href="/collections" className="flex group gap-x-1 text-sm font-medium text-indigo-1 hover:text-indigo-2">
                         View all
                         <ArrowRight className="-rotate-45 group-hover:rotate-0" />
-                    </a>
+                    </LocalizedClientLink>
                 </div>
             </div>
         </section>
