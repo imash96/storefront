@@ -10,12 +10,10 @@ export default function Testimonal() {
                 <div className="xs:flex xs:items-baseline xs:justify-between">
                     <h2 id="category-heading" className="text-2xl font-bold tracking-tight text-grey-81">
                         What our customers say
-                        <p className="text-sm md:text-base lg:text-lg font-extralight text-grey-83">about our product and service.</p>
+                        <p className="text-sm md:text-base lg:text-lg font-extralight text-grey-83">
+                            Real Stories, Real Experiences....!
+                        </p>
                     </h2>
-                    <LocalizedClientLink href="/collection" className="flex gap-x-1 group text-sm font-medium self-end text-indigo-1 hover:text-indigo-2">
-                        View all
-                        <ArrowRight className="-rotate-45 group-hover:rotate-0" />
-                    </LocalizedClientLink>
                 </div>
                 <div className="flex mt-4">
                     <TestimonalSlider />

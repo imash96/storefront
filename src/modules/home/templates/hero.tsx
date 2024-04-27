@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import CARTBUTTON from 'app/[countryCode]/(main)/button';
+import CARTBUTTON from 'app/[countryCode]/(store)/button';
 
 const SwiperConfig: SwiperProps = {
     effect: 'fade',

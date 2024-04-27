@@ -56,7 +56,7 @@ export default async function HeaderContent() {
                                 {category.name}
                                 <ChevronDown className='ml-1 h-4 w-4 group-hover:rotate-180' aria-hidden="true" />
                             </button>
-                            <div className="absolute hidden w-full left-0 top-[97%] shadow-sm shadow-grey-20 bg-grey-20 border-t border-grey-16 text-sm text-left text-grey-81 mt-0.5 group-hover:block group-hover:opacity-100 transition-opacity duration-700">
+                            <div className="absolute hidden w-full left-0 top-[97%] shadow-md shadow-grey-84 bg-grey-20 border-t border-grey-17 text-sm text-left text-grey-81 mt-0.5 group-hover:block group-hover:opacity-100 transition-opacity duration-700">
                                 <div className="mx-auto max-w-7xl p-10 grid grid-cols-2 gap-x-8 gap-y-10">
                                     <div className="grid grid-cols-2 gap-x-4">
                                         <div key='men-cat-01'>

@@ -10,7 +10,9 @@ export default function Category() {
                 <div className="md:flex md:items-baseline md:justify-between">
                     <h2 id="category-heading" className="text-2xl font-bold tracking-tight text-grey-81">
                         Shop by Category
-                        <p className="text-sm md:text-base lg:text-lg font-extralight text-grey-83">Add our new arrivals to your weekly lineup.</p>
+                        <p className="text-sm md:text-base lg:text-lg font-extralight text-grey-83">
+                            Discover Your Style: Navigate by Category for Effortless Shopping!
+                        </p>
                     </h2>
                     <LocalizedClientLink href="/category" className="hidden group text-sm font-medium self-end text-indigo-1 hover:text-indigo-2 md:flex md:gap-x-1">
                         Browse all categories
