@@ -30,7 +30,7 @@ export default function TestimonalSlider() {
                         <div className="slider_text relative mb-7 text-sm p-5 bg-grey-18 border-2 border-grey-16 rounded-md flex-grow basis-32">
                             {slide.para}
                         </div>
-                        <Image src={slide.imageUrl} alt={slide.title} width={96} height={96} className="mb-5 object-cover w-24 h-24 rounded-full" />
+                        <Image src={slide.imageUrl} alt={slide.title} width={96} height={96} className="mb-5 border border-grey-85 object-cover w-24 h-24 rounded-full" />
                         <h3 className="mb-1 font-bold text-xl text-grey-81">{slide.title}</h3>
                         <div className="mb-1 text-xs">{slide.href}</div>
                         <RatingSystem rating={slide.rating} />

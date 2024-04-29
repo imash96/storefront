@@ -20,7 +20,7 @@ export default async function CategoryContent() {
                                 src={category.thumbnail} width={500} height={250} alt={category.alt}
                                 className="object-cover object-center group-hover:opacity-75 md:absolute md:inset-0 md:h-full md:w-full"
                             />
-                            <span aria-hidden="true" className="absolute inset-x-0 bottom-0 bg-gradient-to-tr from-grey-81 from-30% opacity-50" />
+                            <span aria-hidden="true" className="absolute inset-x-0 bottom-0 bg-gradient-to-tr from-grey-83 from-30% opacity-50" />
                             <div className="flex items-end p-6 md:absolute md:inset-0">
                                 <div>
                                     <h3 className="font-bold text-grey-86 text-lg">

@@ -16,12 +16,12 @@ function Thumbnail({ thumbnail, images, size = "small", isFeatured, className }:
 
     return (
         <div className={clsx(
-            "relative w-full overflow-hidden p-4 bg-grey-18 shadow-grey-84 rounded-large group-hover:shadow-grey-82 transition-shadow ease-in-out duration-150",
+            "relative overflow-hidden p-4 bg-grey-18 shadow-grey-84 rounded-large group-hover:shadow-grey-82 transition-shadow ease-in-out duration-150",
             className,
             {
-                "aspect-[11/14]": isFeatured,
-                "aspect-[9/16]": !isFeatured && size !== "square",
-                "aspect-[1/1]": size === "square",
+                "aspect-w-11 aspect-h-14": isFeatured,
+                "aspect-w-9 aspect-h-11": !isFeatured && size !== "square",
+                "aspect-w-1 aspect-h-1": size === "square",
                 "w-[62px]": size === "cart",
                 "w-[100px]": size === "xsmall",
                 "w-[180px]": size === "small",
@@ -42,7 +42,7 @@ function ImageOrPlaceholder({ image, size, }: Pick<ThumbnailProps, "size"> & { i
         <Image
             src={image}
             alt="Thumbnail"
-            className="absolute inset-0 p-1 object-contain object-center"
+            className="w-full h-full absolute inset-0 p-1 object-contain object-center"
             draggable={false}
             fill
             sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"

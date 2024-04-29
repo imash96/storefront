@@ -5,11 +5,11 @@ import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 
 // import Swiper and modules styles
-import '@styles/hero-swiper.css';
 import 'swiper/css';
-import 'swiper/css/effect-fade'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-fade'
+import '@styles/hero-swiper.css';
 import CARTBUTTON from 'app/[countryCode]/(store)/button';
 
 const SwiperConfig: SwiperProps = {
@@ -32,7 +32,7 @@ export default function Hero({ countryCode }: { countryCode: string }) {
             {slides.map((slide) => (
                 <SwiperSlide key={slide.id} className="justify-center">
                     <Image fill={true} alt="model image" className="swiper-slide-image" src={slide.imageUrl} />
-                    <div className="swiper-slide-content text-grey-81 space-y-3 max-w-7xl px-6 md:px-16 xm:px-18 lg:px-20">
+                    <div className="swiper-slide-content text-grey-81 gap-y-3 max-w-7xl px-6 md:px-16 xm:px-18 lg:px-20 xl:px-8">
                         <div className="swiper-slide-title-1 text-5xl">{slide.title}</div>
                         <div className="swiper-slide-title-2 text-4xl">{slide.title}</div>
                         <div className="swiper-slide-text-3 md:w-1/3">{slide.para}</div>

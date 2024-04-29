@@ -3,24 +3,23 @@ import CustomerIcon from "@icons/customer";
 import SupportIcon from "@icons/support";
 import HandcraftedIcon from "@icons/handcrafted";
 import { IconProps } from "types/icon";
+import CreateSection from "@modules/common/create-section";
 
 export default function PointOfDifference() {
     return (
-        <section aria-labelledby="perks-heading" className="bg-grey-20">
-            <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 mx-auto max-w-7xl py-6 px-2 sm:px-4 sm:py-10 md:px-6 lg:py-12 lg:px-8">
-                {podData.map((POD) => (
-                    <div key={POD.name} className="sm:flex text-grey-83">
-                        <div className="w-20 mx-auto sm:mx-0">
-                            <POD.icon width={80} col={{ ...POD.color }} style={{ ...POD.type }} />
-                        </div>
-                        <div className="sm:flex flex-col justify-center align-middle sm:ml-2 text-center sm:text-left uppercase">
-                            <h3 className="text-sm font-bold tracking-wider text-grey-81">{POD.name}</h3>
-                            <p className="font-normal text-xs">{POD.description}</p>
-                        </div>
+        <CreateSection sectionName="point-of-difference" className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+            {podData.map((POD) => (
+                <div key={POD.name} className="sm:flex text-grey-83">
+                    <div className="w-20 mx-auto sm:mx-0">
+                        <POD.icon width={80} col={{ ...POD.color }} style={{ ...POD.type }} />
                     </div>
-                ))}
-            </div>
-        </section>
+                    <div className="sm:flex flex-col justify-center align-middle sm:ml-2 text-center sm:text-left uppercase">
+                        <h3 className="text-sm font-bold tracking-wider text-grey-81">{POD.name}</h3>
+                        <p className="font-normal text-xs">{POD.description}</p>
+                    </div>
+                </div>
+            ))}
+        </CreateSection>
     )
 }
 
