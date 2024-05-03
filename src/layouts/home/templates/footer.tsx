@@ -34,7 +34,7 @@ export default function Footer() {
                                     <label htmlFor="email-address" className="sr-only">
                                         Email address
                                     </label>
-                                    <input type="email" name="email-address" id="email-address" autoComplete="email" required className="py-1.5 pl-10 pr-16 w-full h-[38px] pt-1 rounded-3xl focus:outline-none text-sm bg-grey-17" aria-required="true" aria-invalid="false" />
+                                    <input type="email" name="email-address" id="email-address" autoComplete="email" required className="py-1.5 pl-10 pr-16 w-full h-[38px] pt-1 rounded-3xl border border-grey-12 focus:outline-none text-sm bg-grey-19" aria-required="true" aria-invalid="false" />
                                 </span>
                                 <div className="absolute left-2 top-1.5 iconemail-ab">
                                     <MailIcon width={25} />

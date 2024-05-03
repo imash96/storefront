@@ -197,12 +197,7 @@ type FormatAmountParams = {
 /**
  * Takes an amount and a region, and converts the amount to a localized decimal format
  */
-export const formatAmount = ({
-    amount,
-    region,
-    includeTaxes = true,
-    ...rest
-}: FormatAmountParams) => {
+export const formatAmount = ({ amount, region, includeTaxes = true, ...rest }: FormatAmountParams) => {
     const taxAwareAmount = computeAmount({
         amount,
         region,
@@ -230,21 +225,13 @@ const getTaxRate = (region?: RegionInfo) => {
     return region && !isEmpty(region) ? region?.tax_rate / 100 : 0
 }
 
-const convertToLocale = ({
-    amount,
-    currency_code,
-    minimumFractionDigits,
-    maximumFractionDigits,
-    locale = "en-US",
-}: ConvertToLocaleParams) => {
-    return currency_code && !isEmpty(currency_code)
-        ? new Intl.NumberFormat(locale, {
-            style: "currency",
-            currency: currency_code,
-            minimumFractionDigits,
-            maximumFractionDigits,
-        }).format(amount)
-        : amount.toString()
+const convertToLocale = ({ amount, currency_code, minimumFractionDigits, maximumFractionDigits, locale = "en-US", }: ConvertToLocaleParams) => {
+    return currency_code && !isEmpty(currency_code) ? new Intl.NumberFormat(locale, {
+        style: "currency",
+        currency: currency_code,
+        minimumFractionDigits,
+        maximumFractionDigits,
+    }).format(amount) : amount.toString()
 }
 
 type ConvertToLocaleParams = {

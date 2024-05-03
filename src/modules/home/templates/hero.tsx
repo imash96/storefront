@@ -28,10 +28,18 @@ const SwiperConfig: SwiperProps = {
 
 export default function Hero({ countryCode }: { countryCode: string }) {
     return (
-        <Swiper {...SwiperConfig} className='relative w-full h-[70vh] !overflow-clip -mt-[4.5rem]'>
-            {slides.map((slide) => (
+        <Swiper {...SwiperConfig} className='relative w-full h-[70vh] !overflow-clip -mt-[4.5rem] mb-6'>
+            {slides.map((slide, index) => (
                 <SwiperSlide key={slide.id} className="justify-center">
-                    <Image fill={true} alt="model image" className="swiper-slide-image" src={slide.imageUrl} />
+                    <Image
+                        src={slide.imageUrl}
+                        alt={`hero image ${index}`}
+                        fill={true}
+                        priority={index == 0 ? true : false}
+                        id={slide.id}
+                        fetchPriority={index == 0 ? "high" : "auto"}
+                        className="swiper-slide-image"
+                    />
                     <div className="swiper-slide-content text-grey-81 gap-y-3 max-w-7xl px-6 md:px-16 xm:px-18 lg:px-20 xl:px-8">
                         <div className="swiper-slide-title-1 text-5xl">{slide.title}</div>
                         <div className="swiper-slide-title-2 text-4xl">{slide.title}</div>
@@ -49,28 +57,28 @@ export default function Hero({ countryCode }: { countryCode: string }) {
 
 const slides = [
     {
-        id: 1,
+        id: "1",
         title: "Slide 1",
         para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nemo saepe vero aliquid assu Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         href: "#",
         imageUrl: "https://studio.swiperjs.com/demo-images/models/01.jpg"
     },
     {
-        id: 2,
+        id: "2",
         title: "Slide 2",
         para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nemo saepe vero aliquid assu Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         href: "#",
         imageUrl: "https://studio.swiperjs.com/demo-images/models/02.jpg"
     },
     {
-        id: 3,
+        id: "3",
         title: "Slide 3",
         para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nemo saepe vero aliquid assu Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         href: "#",
         imageUrl: "https://studio.swiperjs.com/demo-images/models/03.jpg"
     },
     {
-        id: 4,
+        id: "4",
         title: "Slide 4",
         para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nemo saepe vero aliquid assu Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         href: "#",

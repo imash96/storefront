@@ -12,7 +12,7 @@ export default function HeaderHolder({ children }: React.PropsWithChildren) {
     const [isScrolled, setIsScrolled] = useState<boolean>(false)
     const [isHome, setIsHome] = useState<boolean>(false)
     const pathname = usePathname()
-    
+
     useEffect(() => { homeRegex.test(pathname) ? setIsHome(true) : setIsHome(false) }, [pathname])
 
     const detectScrollY = () => window.scrollY > 35 ? setIsScrolled(true) : setIsScrolled(false)
@@ -23,7 +23,7 @@ export default function HeaderHolder({ children }: React.PropsWithChildren) {
         };
     });
     return (
-        <header className={`sticky top-0 z-20 hover:bg-grey-19 transition-colors duration-500 ${isScrolled ? 'shadow-sm shadow-grey-7 bg-grey-19' : isHome ? 'bg-transparent' : 'bg-grey-19'}`}>
+        <header className={`sticky top-0 z-20 hover:bg-grey-19 transition-colors duration-500 ${isScrolled ? 'shadow-sm shadow-grey-7 bg-grey-19  border-transparent' : isHome ? 'bg-transparent' : 'bg-grey-19 border-b border-grey-18'}`}>
             <nav aria-label="nav" className="mx-auto max-w-7xl px-4 sm:px-6 xm:px-8 border-none flex h-[4.5rem] items-center text-grey-81">
                 <button type="button" onClick={mobileMenuOpen} className="rounded-md p-2 xm:hidden">
                     <Bars3Icon className="h-7 w-7" />

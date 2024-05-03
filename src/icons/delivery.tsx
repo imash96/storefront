@@ -1,6 +1,6 @@
 import { IconProps } from "types/icon"
 
-const DeliveryIcon: React.FC<IconProps> = ({ width = 16, col, style, ...props }) => {
+export default function DeliveryIcon({ width = 16, col, style, ...props }: IconProps) {
     return (
         <svg width={width} viewBox="0 0 100 100" {...props} >
             <circle cx={50} cy={50} r={49} fill='none' style={col} strokeWidth={0.7} />
@@ -9,5 +9,3 @@ const DeliveryIcon: React.FC<IconProps> = ({ width = 16, col, style, ...props })
         </svg>
     )
 }
-
-export default DeliveryIcon;

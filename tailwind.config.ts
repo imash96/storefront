@@ -30,8 +30,9 @@ const config: Config = {
       on: 'rgb(var(--on) / <alpha-value>)',
       main: 'rgb(var(--main) / <alpha-value>)',
       curtain: 'rgb(var(--curtain) / <alpha-value>)',
-      "same-bg": 'rgb(var(--same-bg) / <alpha-value>)',
-      "same-text": 'rgb(var(--same-text) / <alpha-value>)',
+      sameBg: 'rgb(var(--same-bg) / <alpha-value>)',
+      bgBase: 'rgb(var(--bg-base) / <alpha-value>)',
+      sameText: 'rgb(var(--same-text) / <alpha-value>)',
       canvas: 'rgb(var(--canvas) / <alpha-value>)',
       thumbnail: 'rgb(var(--thumbnail) / <alpha-value>)',
       grey: {

@@ -4,7 +4,7 @@ import LocalizedClientLink from "@modules/common/localized-client-link";
 
 export default function NavBar({ regions }: { regions: Region[] | null }) {
     return (
-        <div className="bg-same-bg text-same-text text-xs xs:text-sm xs:font-medium">
+        <div className="bg-sameBg text-sameText text-xs xs:text-sm xs:font-medium">
             <div className="max-w-7xl mx-auto h-9 px-4 flex items-center justify-between md:px-6 lg:px-8">
                 <div className="w-full md:w-6/12">
                     <ul className="flex justify-center md:justify-start gap-x-6">

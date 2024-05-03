@@ -25,7 +25,7 @@ export default function CartFooter({ cart }: cartContent) {
                 </div>
                 <p className="mt-0.5 text-sm text-grey-83">Shipping and taxes calculated at checkout.</p>
                 <LocalizedClientLink href="/cart" className='w-full mt-4'>
-                    <Button className="bg-blue-2">Go to Cart</Button>
+                    <Button className="bg-blue-2 w-full rounded-full p-3" isLoading={false}>Go to Cart</Button>
                 </LocalizedClientLink>
                 <CartExploreButton className="mt-4 flex gap-2 justify-center text-center text-sm hover:animate-pulse hover:text-grey-85 active:text-grey-83">
                     Continue Shopping

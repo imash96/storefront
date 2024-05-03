@@ -1,18 +1,15 @@
-import { PricedProduct } from "@medusajs/client-types"
-
+import type { PricedProduct } from "@medusajs/medusa/dist/types/pricing"
 import { formatAmount } from "@libs/utils/prices"
-import { RegionInfo } from "types/global"
-import { CalculatedVariant } from "types/medusa"
+import type { RegionInfo } from "types/global"
+import type { CalculatedVariant } from "types/medusa"
 
-export function getProductPrice({
-    product,
-    variantId,
-    region,
-}: {
-    product: PricedProduct
-    variantId?: string
+type props = {
+    product: PricedProduct,
+    variantId?: string,
     region: RegionInfo
-}) {
+}
+
+export function getProductPrice({ product, variantId, region, }: props) {
     if (!product || !product.id) {
         throw new Error("No product provided")
     }

@@ -15,7 +15,7 @@ export default function RootLayout({ children }: Readonly<React.PropsWithChildre
     const theme = cookieStore.get('theme')
     return (
         <html lang="en" data-theme={theme?.value ? theme.value : "light"}>
-            <body>
+            <body className="bg-bgBase">
                 {children}
             </body>
         </html>

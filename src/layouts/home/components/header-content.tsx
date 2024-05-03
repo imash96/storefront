@@ -74,7 +74,7 @@ export default async function HeaderContent() {
                                             <div className={`text-lg underline font-semibold`}>SHOP BY STYLE</div>
                                             {new_style[category.rank].category_children.map(cat => (
                                                 <LocalizedClientLink href={`/category/${cat.handle}`} key={cat.id} className="flex text-sm px-2 py-3 rounded-lg hover:bg-grey-18">
-                                                    <Image src={"/thumbnails/01.webp"} width={50} height={50} alt='thumb' className="bg-same-text rounded-md shadow-md shadow-grey-15" />
+                                                    <Image src={"/thumbnails/01.webp"} width={50} height={50} alt='thumb' className="bg-sameText rounded-md shadow-md shadow-grey-15" />
                                                     <span className="ml-2 text-lg my-auto">{cat.name}</span>
                                                 </LocalizedClientLink>
                                             ))}
