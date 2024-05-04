@@ -13,7 +13,7 @@ export default function Accordion({ title, children }: accordionProp) {
     const { state, toggle } = useToggleState()
 
     return (
-        <details open={state} onToggle={() => toggle()} className="accordion border-grey-18 group border-t lg:last:border-b px-1 py-2">
+        <details open={state} onToggle={() => toggle()} className="accordion border-grey-18 group border-t last:border-b px-1 py-2">
             <summary className="flex w-full items-center text-base text-grey-81 justify-between cursor-pointer select-none py-3">
                 <span className="text-left font-semibold">
                     {title}

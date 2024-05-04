@@ -39,9 +39,9 @@ export default function ProductSlider({ images }: { images: MedusaImage[] }) {
                 </Swiper>
             </div>
             <div className="">
-                <Swiper onSwiper={setThumbsSwiper} {...SwiperConfigThumb} className="thumbSwiper image-thumb h-24 md:h-full">
+                <Swiper onSwiper={setThumbsSwiper} {...SwiperConfigThumb} className="thumbSwiper h-24 md:h-full">
                     {images.map((image, index) => (
-                        <SwiperSlide key={image.id} className="border-solid border border-grey-18 rounded-sm bg-grey-19">
+                        <SwiperSlide key={image.id} className="border-solid border border-grey-18 rounded-md bg-grey-19">
                             <Image
                                 src={image.url}
                                 alt={`Product thumbnail ${index + 1}`}
