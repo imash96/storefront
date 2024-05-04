@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
@@ -9,6 +10,9 @@ const config: Config = {
     "./node_modules/@medusajs/ui/dist/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['Geist Sans', ...fontFamily.sans]
+    },
     screens: {
       '2xs': '320px',
       'xs': '360px',
@@ -122,6 +126,7 @@ const config: Config = {
       transitionProperty: {
         width: "width margin",
         height: "height",
+        maxHeight: "max-height",
         bg: "background-color",
         display: "display opacity",
         visibility: "visibility",
@@ -183,7 +188,7 @@ const config: Config = {
         },
         "accordion-slide-up": {
           "0%": {
-            height: "var(--radix-accordion-content-height)",
+            height: "100%",
             opacity: "1",
           },
           "100%": {
@@ -198,7 +203,7 @@ const config: Config = {
             opacity: "0",
           },
           "100%": {
-            "min-height": "var(--radix-accordion-content-height)",
+            "min-height": "100%",
             "max-height": "none",
             opacity: "1",
           },

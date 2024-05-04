@@ -131,7 +131,7 @@ export default function ProductActions({ product, region, disabled, }: ProductAc
 
             <div className="flex flex-col gap-y-6">
                 {variants.length > 1 && (
-                    <div className="flex flex-col gap-y-2">
+                    <div className="flex flex-col gap-y-6">
                         {(product.options || []).map((option) => {
                             return (
                                 <OptionSelect key={option.id}
@@ -146,11 +146,11 @@ export default function ProductActions({ product, region, disabled, }: ProductAc
                     </div>
                 )}
                 <div className="flex gap-4">
-                    <Button onClick={handleAddToCart} disabled={!inStock || !variant || !!disabled || isAdding} variant="primary" className="bg-blue-2 w-full rounded-md justify-center flex-wrap content-center p-3" isLoading={isAdding} >
+                    <Button onClick={handleAddToCart} disabled={!inStock || !variant || !!disabled || isAdding} variant="primary" className="bg-blue-2 w-full rounded-md justify-center flex-wrap content-center p-3 min-h-14" isLoading={isAdding} >
                         {!variant ? "Select variant" : !inStock ? "Out of stock" : !isAdding ? 'Add to Cart' : <Spinner />}
                     </Button>
-                    <Button onClick={handleAddToCart} disabled={!inStock || !variant || !!disabled || isAdding} variant="primary" className="bg-grey-81 w-full rounded-md justify-center flex-wrap content-center p-3" isLoading={isAdding} >
-                        Advance Customization
+                    <Button onClick={handleAddToCart} disabled={!inStock || !variant || !!disabled || isAdding} variant="primary" className="bg-grey-81 w-full rounded-md justify-center flex-wrap content-center p-3 min-h-14" isLoading={isAdding} >
+                        Customize
                     </Button>
                 </div>
             </div>

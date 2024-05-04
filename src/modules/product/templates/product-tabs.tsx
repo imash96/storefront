@@ -1,9 +1,6 @@
-"use client"
-
 import { PricedProduct } from "@medusajs/medusa/dist/types/pricing"
 import ProductInfoTab from "../components/tab-product-info"
 import ShippingInfoTab from "../components/tab-shipping-info"
-import { useState } from "react"
 import Accordion from "@modules/common/accordion"
 
 export default function ProductTabs({ product }: { product: PricedProduct }) {
@@ -19,7 +16,6 @@ export default function ProductTabs({ product }: { product: PricedProduct }) {
             component: <ShippingInfoTab />,
         },
     ]
-    const [currentTab, setCurrentTab] = useState<string>('info');
 
     return (
         <>

@@ -8,6 +8,15 @@
   }
 }
 
+@layer base {
+  @font-face {
+    font-family: 'Geist Sans';
+    font-style: normal;
+    font-display: swap;
+    src: url(https://cdn.jsdelivr.net/npm/geist/dist/fonts/geist-sans/Geist-Variable.woff2) format('woff2'),
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -10,8 +10,19 @@ type Props = {
     }
 }
 
+type payloadType = {
+    id?: string,
+    handle?: string,
+    expand?: string
+    regionId?: string
+}
+
 const getPricedProductByHandle = async (handle: string, region: Region) => {
-    const { product } = await getProductByHandle(handle, region.id).then(
+    let payload: payloadType = {}
+    handle.startsWith('prod_') ? (payload['id'] = handle) : (payload['handle'] = handle)
+    const expand = 'variants,options,options.values,variants.prices,variants.options,collection,tags,type,images,sales_channels,categories'
+    payload['regionId'] = region.id
+    const { product } = await getProductByHandle(handle, region.id, expand).then(
         (product) => product
     )
 

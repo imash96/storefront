@@ -435,12 +435,12 @@ export const retrievePricedProductById = cache(async function ({
 })
 
 export const getProductByHandle = cache(async function (
-    handle: string, regionId?: string
+    handle: string, regionId?: string, expand?: string
 ): Promise<{ product: PricedProduct }> {
     const headers = getMedusaHeaders(["products"])
 
     const product = await medusaClient.products
-        .list({ handle, region_id: regionId }, headers)
+        .list({ handle, region_id: regionId, expand }, headers)
         .then(({ products }) => products[0])
         .catch((err) => {
             throw err
