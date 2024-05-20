@@ -7,13 +7,13 @@ import { redirect } from "next/navigation"
 import { getRegion, updateCart } from "@libs/data"
 
 /**
- * Updates the countrycode param and revalidates the regions cache
+ * Updates the regionCode param and revalidates the regions cache
  * @param regionId
- * @param countryCode
+ * @param regionCode
  */
-export async function updateRegion(countryCode: string, currentPath: string) {
+export async function updateRegion(regionCode: string, currentPath: string) {
     const cartId = cookies().get("_cart_id")?.value
-    const region = await getRegion(countryCode)
+    const region = await getRegion(regionCode)
 
     if (!region) {
         return null
@@ -31,5 +31,5 @@ export async function updateRegion(countryCode: string, currentPath: string) {
         return "Error updating region"
     }
 
-    redirect(`/${countryCode}${currentPath}`)
+    redirect(`/${regionCode}${currentPath}`)
 }

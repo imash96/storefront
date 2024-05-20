@@ -3,16 +3,18 @@ import { medusaClient } from "@libs/config";
 import { getRegion } from "@libs/data";
 import CreateSection from "@modules/common/create-section";
 import LocalizedClientLink from "@modules/common/localized-client-link";
+import Image from "next/image";
 
-export default async function NewArrival({ countryCode }: { countryCode: string }) {
-    const region = await getRegion(countryCode)
+export default async function NewArrival({ regionCode }: { regionCode: string }) {
+    const region = await getRegion(regionCode)
 
     if (!region) {
         return null
     }
     const { products } = await medusaClient.products.list({
         limit: 4,
-        region_id: region.id
+        region_id: region.id,
+        collection_id: [""]
     })
     return (
         <CreateSection sectionName="new-arrival">
@@ -29,7 +31,9 @@ export default async function NewArrival({ countryCode }: { countryCode: string 
                 {products.map(product => (
                     <div key={product.id} className="group relative">
                         <div className="h-56 w-full overflow-clip rounded-md group-hover:opacity-75 lg:h-72 xl:h-80">
-                            <img
+                            <Image
+                                width={300}
+                                height={400}
                                 src={product.thumbnail ? product.thumbnail : ''}
                                 alt={`product.imageAlt`}
                                 className="h-full w-full object-cover object-center"

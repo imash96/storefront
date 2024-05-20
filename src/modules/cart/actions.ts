@@ -23,7 +23,7 @@ import {
  * @example
  * const cart = await getOrSetCart()
  */
-export async function getOrSetCart(countryCode: string) {
+export async function getOrSetCart(regionCode: string) {
     const cartId = cookies().get("_cart_id")?.value
     let cart
 
@@ -31,7 +31,7 @@ export async function getOrSetCart(countryCode: string) {
         cart = await getCart(cartId).then((cart) => cart)
     }
 
-    const region = await getRegion(countryCode)
+    const region = await getRegion(regionCode)
 
     if (!region) {
         return null
@@ -77,13 +77,13 @@ export async function retrieveCart() {
 export async function addToCart({
     variantId,
     quantity,
-    countryCode,
+    regionCode,
 }: {
     variantId: string
     quantity: number
-    countryCode: string
+    regionCode: string
 }) {
-    const cart = await getOrSetCart(countryCode).then((cart) => cart)
+    const cart = await getOrSetCart(regionCode).then((cart) => cart)
 
     if (!cart) {
         return "Missing cart ID"

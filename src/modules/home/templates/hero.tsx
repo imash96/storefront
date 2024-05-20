@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
-import Image from 'next/image';
+import CARTBUTTON from 'app/[regionCode]/(store)/button';
 
 // import Swiper and modules styles
 import 'swiper/css';
@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade'
 import '@styles/hero-swiper.css';
-import CARTBUTTON from 'app/[countryCode]/(store)/button';
+import '@styles/slide.css';
 
 const SwiperConfig: SwiperProps = {
     effect: 'fade',
@@ -26,25 +26,16 @@ const SwiperConfig: SwiperProps = {
     modules: [Autoplay, Pagination, Navigation, EffectFade],
 }
 
-export default function Hero({ countryCode }: { countryCode: string }) {
+export default function Hero({ regionCode }: { regionCode: string }) {
     return (
         <Swiper {...SwiperConfig} className='relative w-full h-[70vh] !overflow-clip -mt-[4.5rem] mb-6'>
             {slides.map((slide, index) => (
-                <SwiperSlide key={slide.id} className="justify-center">
-                    <Image
-                        src={slide.imageUrl}
-                        alt={`hero image ${index}`}
-                        fill={true}
-                        priority={index == 0 ? true : false}
-                        id={slide.id}
-                        fetchPriority={index == 0 ? "high" : "auto"}
-                        className="swiper-slide-image"
-                    />
+                <SwiperSlide key={slide.id} className={`justify-center slide${index + 1}`}>
                     <div className="swiper-slide-content text-grey-81 gap-y-3 max-w-7xl px-6 md:px-16 xm:px-18 lg:px-20 xl:px-8">
                         <div className="swiper-slide-title-1 text-5xl">{slide.title}</div>
                         <div className="swiper-slide-title-2 text-4xl">{slide.title}</div>
                         <div className="swiper-slide-text-3 md:w-1/3">{slide.para}</div>
-                        <CARTBUTTON className='w-42 text-center rounded-md border border-grey-11 bg-button-s px-6 py-3 text-base font-medium text-grey-81 shadow-sm hover:bg-button-h' countryCode={countryCode} />
+                        <CARTBUTTON className='w-42 text-center rounded-md border border-grey-11 bg-button-s px-6 py-3 text-base font-medium text-grey-81 shadow-sm hover:bg-button-h' regionCode={regionCode} />
                     </div>
                 </SwiperSlide>
             ))}

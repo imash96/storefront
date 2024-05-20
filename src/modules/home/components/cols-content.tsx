@@ -12,7 +12,7 @@ export default async function CollectionContent() {
     return (
         <div className="grid mt-6 justify-items-center gap-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-6">
             {filteredcollection.map((collection) => (
-                <LocalizedClientLink key={collection.id} href={collection.handle} className="flex flex-col relative shadow-md shadow-grey-84 rounded-md w-full hover:opacity-75 overflow-clip aspect-h-12 aspect-w-10">
+                <LocalizedClientLink key={collection.id} href={`/collections/${collection.handle}`} className="flex flex-col relative shadow-md shadow-grey-84 rounded-md w-full hover:opacity-75 overflow-clip aspect-h-12 aspect-w-10">
                     <span aria-hidden="true" className="absolute inset-0">
                         <Image
                             width={300}

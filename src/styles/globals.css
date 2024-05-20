@@ -125,4 +125,9 @@
     margin-top: -4px;
   }
 
+  .boxes {
+    background-image: linear-gradient(rgb(var(--boxes)) 0.5px, transparent 0.5px), linear-gradient(to right, rgb(var(--boxes)) 0.5px, rgb(var(--bg-base)) 0.5px);
+    background-size: 10px 10px;
+  }
+
 }

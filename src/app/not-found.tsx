@@ -1,6 +1,6 @@
 import ArrowRight from "@icons/arrow-right"
+import LocalizedClientLink from "@modules/common/localized-client-link"
 import { Metadata } from "next"
-import Link from "next/link"
 
 export const metadata: Metadata = {
     title: "404",
@@ -14,10 +14,10 @@ export default function NotFound() {
             <p className="text-sm font-normal">
                 The page you tried to access does not exist.
             </p>
-            <Link className="flex gap-x-1 items-center group" href="/" >
+            <LocalizedClientLink className="flex gap-x-1 items-center group" href="/" >
                 <span className="text-grey-82">Go to frontpage</span>
                 <ArrowRight className="group-hover:-rotate-45 ease-in-out duration-150" />
-            </Link>
+            </LocalizedClientLink>
         </div>
     )
 }

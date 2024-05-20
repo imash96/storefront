@@ -44,27 +44,23 @@ async function getRegionMap() {
  * @param request
  * @param response
  */
-async function getCountryCode(request: NextRequest, regionMap: Map<string, Region | number>) {
+async function getRegionCode(request: NextRequest, regionMap: Map<string, Region | number>) {
     try {
-        let countryCode
 
-        const vercelCountryCode = request.headers
-            .get("x-vercel-ip-country")
-            ?.toLowerCase()
+        const vercelRegionCode = request.headers.get("x-vercel-ip-country")?.toLowerCase()
 
-        const urlCountryCode = request.nextUrl.pathname.split("/")[1]?.toLowerCase()
+        const urlRegionCode = request.nextUrl.pathname.split("/")[1]?.toLowerCase()
 
-        if (urlCountryCode && regionMap.has(urlCountryCode)) {
-            countryCode = urlCountryCode
-        } else if (vercelCountryCode && regionMap.has(vercelCountryCode)) {
-            countryCode = vercelCountryCode
+        if (urlRegionCode && regionMap.has(urlRegionCode)) {
+            return urlRegionCode
+        } else if (vercelRegionCode && regionMap.has(vercelRegionCode)) {
+            return vercelRegionCode
         } else if (regionMap.has(DEFAULT_REGION)) {
-            countryCode = DEFAULT_REGION
+            return DEFAULT_REGION
         } else if (regionMap.keys().next().value) {
-            countryCode = regionMap.keys().next().value
+            return regionMap.keys().next().value
         }
 
-        return countryCode
     } catch (error) {
         console.error(
             "Middleware.ts: Error getting the country code. Did you set up regions in your Medusa Admin and define a NEXT_PUBLIC_MEDUSA_BACKEND_URL environment variable?"
@@ -83,13 +79,13 @@ export async function middleware(request: NextRequest) {
 
     const regionMap = await getRegionMap()
 
-    const countryCode = regionMap && (await getCountryCode(request, regionMap))
+    const regionCode = regionMap && (await getRegionCode(request, regionMap))
 
-    const urlHasCountryCode =
-        countryCode && request.nextUrl.pathname.split("/")[1].includes(countryCode)
+    const urlHasRegionCode =
+        regionCode && request.nextUrl.pathname.split("/")[1].includes(regionCode)
 
     // check if one of the country codes is in the url
-    if (urlHasCountryCode && (!cartId || cartIdCookie)) {
+    if (urlHasRegionCode && (!cartId || cartIdCookie)) {
         return NextResponse.next()
     }
 
@@ -103,8 +99,8 @@ export async function middleware(request: NextRequest) {
     let response = NextResponse.redirect(redirectUrl, 307)
 
     // If no country code is set, we redirect to the relevant region.
-    if (!urlHasCountryCode && countryCode) {
-        redirectUrl = `${request.nextUrl.origin}/${countryCode}${redirectPath}${queryString}`
+    if (!urlHasRegionCode && regionCode) {
+        redirectUrl = `${request.nextUrl.origin}/${regionCode}${redirectPath}${queryString}`
         response = NextResponse.redirect(`${redirectUrl}`, 307)
     }
 

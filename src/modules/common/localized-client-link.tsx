@@ -13,10 +13,10 @@ type LinkProp = {
 } & React.PropsWithChildren
 
 export default function LocalizedClientLink({ children, href, ...props }: LinkProp) {
-    const { countryCode } = useParams()
+    const { regionCode } = useParams()
 
     return (
-        <Link href={`/${countryCode}${href}`} {...props}>
+        <Link href={`/${regionCode}${href}`} {...props}>
             {children}
         </Link>
     )

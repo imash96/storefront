@@ -15,7 +15,7 @@ import { uspData } from "@modules/home/templates/uspt"
 type productProps = {
     product: PricedProduct
     region: Region
-    countryCode?: string
+    regionCode?: string
 }
 
 export default function Product({ product, region }: productProps) {

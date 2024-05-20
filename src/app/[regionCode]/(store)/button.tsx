@@ -5,7 +5,7 @@ import { addToCart } from "@modules/cart/actions"
 import { useState } from "react"
 
 
-export default function CARTBUTTON({ countryCode, className }: { countryCode: string, className: string }) {
+export default function CARTBUTTON({ regionCode, className }: { regionCode: string, className: string }) {
     const [isAdding, setIsAdding] = useState(false)
     const variantIds = [
         'variant_01HWF8D5W722TJVCRVSBAHCF7Z',
@@ -19,18 +19,18 @@ export default function CARTBUTTON({ countryCode, className }: { countryCode: st
     ]
     const variantId = variantIds[Math.floor(Math.random() * variantIds.length)]
     const quantity = 1
-    const handleAddToCart = async ({ variantId, quantity, countryCode }: { variantId: string, quantity: number, countryCode: string }) => {
+    const handleAddToCart = async ({ variantId, quantity, regionCode }: { variantId: string, quantity: number, regionCode: string }) => {
         if (!variantId) return null
         setIsAdding(true)
         await addToCart({
             variantId,
             quantity,
-            countryCode,
+            regionCode,
         })
         setIsAdding(false)
     }
     return (
-        <button onClick={() => handleAddToCart({ variantId, quantity, countryCode })} className={className}>
+        <button onClick={() => handleAddToCart({ variantId, quantity, regionCode })} className={className}>
             {isAdding ? <Spinner /> : 'Add to Cart'}
         </button>
     )

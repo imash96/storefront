@@ -2,7 +2,7 @@
 export type SortOptions = "price_asc" | "price_desc" | "created_at"
 
 type Props = {
-    params: { handle: string[]; countryCode: string }
+    params: { handle: string[]; regionCode: string }
     searchParams: {
         page?: string
         sortBy?: SortOptions

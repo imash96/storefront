@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description: "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
 }
 
-export default function Page({ params }: { params: { countryCode: string } }) {
-  const { countryCode } = params
+export default function Page({ params }: { params: { regionCode: string } }) {
+  const { regionCode } = params
   return (
     <>
-      <Home countryCode={countryCode} />
-      {/* <CARTBUTTON countryCode={countryCode} /> */}
+      <Home regionCode={regionCode} />
+      {/* <CARTBUTTON regionCode={regionCode} /> */}
     </>
   );
 }

@@ -8,16 +8,16 @@ import Promotion from "./templates/prom";
 import Testimonal from "./templates/test";
 import UniqueSellingPoint from "./templates/uspt";
 
-export default function Home({ countryCode }: { countryCode: string }) {
+export default function Home({ regionCode }: { regionCode: string }) {
     return (
         <>
-            <Hero countryCode={countryCode} />
+            <Hero regionCode={regionCode} />
             <UniqueSellingPoint />
             <Category />
             <Collection />
-            <Promotion countryCode={countryCode} />
+            <Promotion regionCode={regionCode} />
             <CollectionPromotion />
-            <NewArrival countryCode={countryCode} />
+            <NewArrival regionCode={regionCode} />
             <Testimonal />
             <PointOfDifference />
         </>

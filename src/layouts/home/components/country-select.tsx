@@ -23,8 +23,8 @@ export default function CountrySelect({ regions }: CountrySelectProps) {
     const [current, setCurrent] = useState<CountryOption | undefined>(undefined)
     const [isSettingRegion, setIsSettingRegion] = useState<boolean>(false)
     const { state, open, close, toggle } = useToggleState()
-    const { countryCode } = useParams()
-    const currentPath = usePathname().split(`/${countryCode}`)[1]
+    const { regionCode } = useParams()
+    const currentPath = usePathname().split(`/${regionCode}`)[1]
     const options: CountryOption[] | undefined = useMemo(() => {
         return regions?.map((r) => {
             return r.countries!.map((c) => ({
@@ -36,8 +36,8 @@ export default function CountrySelect({ regions }: CountrySelectProps) {
     }, [regions])
 
     useEffect(() => {
-        countryCode && setCurrent(options?.find((o) => o.country === countryCode))
-    }, [countryCode, options])
+        regionCode && setCurrent(options?.find((o) => o.country === regionCode))
+    }, [regionCode, options])
 
     const handleClick = async (option: CountryOption) => {
         setIsSettingRegion(true)
@@ -57,8 +57,8 @@ export default function CountrySelect({ regions }: CountrySelectProps) {
             </div>
             <ul className={`${state ? "opacity-100" : "hidden opacity-0"} country-select absolute w-48 shadow-md shadow-grey-18 z-30 bg-grey-18 text-sm border border-grey-16 rounded-md overflow-y-auto max-h-72`}>
                 {options?.map((o, index) => (
-                    <li key={index} className={`${countryCode === o.country ? "pointer-events-none bg-grey-20 text-blue-4" : "active:bg-grey-15 hover:bg-grey-16 text-grey-81"} flex py-2 cursor-pointer gap-2 px-3`} onClick={() => handleClick(o)}>
-                        <span className={`${countryCode === o.country ? "font-semibold" : "font-normal"} block truncate`}  >
+                    <li key={index} className={`${regionCode === o.country ? "pointer-events-none bg-grey-20 text-blue-4" : "active:bg-grey-15 hover:bg-grey-16 text-grey-81"} flex py-2 cursor-pointer gap-2 px-3`} onClick={() => handleClick(o)}>
+                        <span className={`${regionCode === o.country ? "font-semibold" : "font-normal"} block truncate`}  >
                             <ReactCountryFlag svg className="w-4 h-4" countryCode={o.country} alt={o.label} />
                             {` ${o.label}`}
                         </span>

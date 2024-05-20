@@ -5,7 +5,7 @@ import Product from "@modules/product";
 
 type Props = {
     params: {
-        countryCode: string;
+        regionCode: string;
         handle: string
     }
 }
@@ -30,7 +30,7 @@ const getPricedProductByHandle = async (handle: string, region: Region) => {
 }
 
 export default async function Page({ params }: Props) {
-    const region = await getRegion(params.countryCode)
+    const region = await getRegion(params.regionCode)
 
     if (!region) {
         notFound()
@@ -43,6 +43,6 @@ export default async function Page({ params }: Props) {
     }
 
     return (
-        <Product product={pricedProduct} countryCode={params.countryCode} region={region} />
+        <Product product={pricedProduct} regionCode={params.regionCode} region={region} />
     )
 }

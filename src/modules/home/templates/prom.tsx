@@ -3,9 +3,10 @@ import { medusaClient } from "@libs/config";
 import { getRegion } from "@libs/data";
 import CreateSection from "@modules/common/create-section";
 import LocalizedClientLink from "@modules/common/localized-client-link";
+import Image from "next/image";
 
-export default async function Promotion({ countryCode }: { countryCode: string }) {
-    const region = await getRegion(countryCode)
+export default async function Promotion({ regionCode }: { regionCode: string }) {
+    const region = await getRegion(regionCode)
 
     if (!region) {
         return null
@@ -20,7 +21,7 @@ export default async function Promotion({ countryCode }: { countryCode: string }
                 <h2 id="favorites-heading" className="text-2xl font-bold tracking-tight text-grey-81">
                     Trending Products
                 </h2>
-                <LocalizedClientLink href="#" className="flex gap-x-1 items-center group text-sm font-medium text-indigo-1 hover:text-indigo-2">
+                <LocalizedClientLink href="/collections/trending-products" className="flex gap-x-1 items-center group text-sm font-medium text-indigo-1 hover:text-indigo-2">
                     View all
                     <ArrowRight className="-rotate-45 group-hover:rotate-0" />
                 </LocalizedClientLink>
@@ -29,7 +30,9 @@ export default async function Promotion({ countryCode }: { countryCode: string }
                 {products.map(product => (
                     <div key={product.id} className="group relative">
                         <div className="h-56 w-full overflow-clip rounded-md group-hover:opacity-75 lg:h-72 xl:h-80">
-                            <img
+                            <Image
+                                width={300}
+                                height={400}
                                 src={product.thumbnail ? product.thumbnail : ''}
                                 alt={`product.imageAlt`}
                                 className="h-full w-full object-cover object-center"

@@ -30,7 +30,7 @@ export default function ProductActions({ product, region, disabled, }: ProductAc
     const [options, setOptions] = useState<Record<string, string>>({})
     const [isAdding, setIsAdding] = useState(false)
 
-    const countryCode = useParams().countryCode as string
+    const regionCode = useParams().regionCode as string
 
     const { variants } = product
 
@@ -119,7 +119,7 @@ export default function ProductActions({ product, region, disabled, }: ProductAc
         await addToCart({
             variantId: variant.id,
             quantity: 1,
-            countryCode,
+            regionCode,
         })
 
         setIsAdding(false)
