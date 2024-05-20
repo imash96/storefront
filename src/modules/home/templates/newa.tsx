@@ -14,7 +14,7 @@ export default async function NewArrival({ regionCode }: { regionCode: string })
     const { products } = await medusaClient.products.list({
         limit: 4,
         region_id: region.id,
-        collection_id: [""]
+        // collection_id: [""]
     })
     return (
         <CreateSection sectionName="new-arrival">

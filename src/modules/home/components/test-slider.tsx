@@ -7,7 +7,6 @@ import RatingSystem from "@modules/common/rating-system"
 
 const SwiperConfig: SwiperProps = {
     speed: 900,
-    spaceBetween: 10,
     slidesPerView: 1,
     loop: true,
     grabCursor: true,
@@ -23,7 +22,7 @@ const SwiperConfig: SwiperProps = {
 
 export default function TestimonalSlider() {
     return (
-        <div className="flex flex-col overflow-clip">
+        <div className="flex flex-col overflow-hidden">
             <Swiper {...SwiperConfig} className="review-swiper w-full h-full text-grey-83">
                 {slides.map((slide) => (
                     <SwiperSlide key={slide.id} className="!flex flex-col items-center h-auto text-center">
