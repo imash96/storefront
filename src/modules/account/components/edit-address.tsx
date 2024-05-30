@@ -107,7 +107,7 @@ export default function EditAddress({ region, address, isActive = false, }: Edit
                 </div>
             </div>
 
-            <Modal isOpen={state} close={close} data-testid="edit-address-modal">
+            {/* <Modal isOpen={state} close={close} data-testid="edit-address-modal">
                 <Modal.Title>
                     <h1 className="mb-2">Edit address</h1>
                 </Modal.Title>
@@ -216,7 +216,7 @@ export default function EditAddress({ region, address, isActive = false, }: Edit
                         </div>
                     </Modal.Footer>
                 </form>
-            </Modal>
+            </Modal> */}
         </>
     )
 }
