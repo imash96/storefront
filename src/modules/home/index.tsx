@@ -5,6 +5,7 @@ import Hero from "./templates/hero";
 import NewArrival from "./templates/newa";
 import PointOfDifference from "./templates/podf";
 import Promotion from "./templates/prom";
+import Sale from "./templates/sale";
 import Testimonal from "./templates/test";
 import UniqueSellingPoint from "./templates/uspt";
 
@@ -19,6 +20,7 @@ export default function Home({ regionCode }: { regionCode: string }) {
             <CollectionPromotion />
             <NewArrival regionCode={regionCode} />
             <Testimonal />
+            <Sale regionCode={regionCode} />
             <PointOfDifference />
         </>
     )

@@ -18,6 +18,16 @@
 }
 
 @layer utilities {
+
+  input:focus~label,
+  input:not(:placeholder-shown)~label {
+    @apply -translate-y-3 text-xs leading-5 font-normal;
+  }
+
+  input:focus~label {
+    @apply left-0;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
@@ -130,4 +140,20 @@
     background-size: 10px 10px;
   }
 
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:hover,
+  select:-webkit-autofill,
+  select:-webkit-autofill:focus,
+  select:-webkit-autofill:hover,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:focus,
+  textarea:-webkit-autofill:hover {
+    border: 1px solid rgb(var(--yellow-1));
+    -webkit-text-fill-color: rbg(var(--gray-81));
+    color: rbg(var(--gray-81));
+    -webkit-box-shadow: inset 0 0 0 1000px rgb(var(--bg-base));
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 }

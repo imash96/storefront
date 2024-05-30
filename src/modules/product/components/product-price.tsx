@@ -25,7 +25,7 @@ export default function ProductPrice({ product, variant, region, }: productPrice
 
     return (
         <div className="flex flex-col text-grey-81">
-            <span data-value={selectedPrice.calculated_price_number} className={clsx("text-3xl font-semibold", {
+            <span className={clsx("text-3xl font-semibold", {
                 "text-red-4": selectedPrice.price_type === "sale",
             })}>
                 {selectedPrice.calculated_price}
@@ -34,10 +34,7 @@ export default function ProductPrice({ product, variant, region, }: productPrice
                 <>
                     <p>
                         <span className="text-grey-82">Original: </span>
-                        <span
-                            className="line-through"
-                            data-value={selectedPrice.original_price_number}
-                        >
+                        <span className="line-through">
                             {selectedPrice.original_price}
                         </span>
                     </p>

@@ -13,7 +13,7 @@
     left: 50%;
     width: 20px;
     height: 20px;
-    background-color: rgb(var(--gray-18));
+    background-color: rgb(var(--gray-19));
     border-bottom: 2px solid rgb(var(--gray-16));
     border-right: 2px solid rgb(var(--gray-16));
     border-bottom-right-radius: 6px;

@@ -10,7 +10,7 @@ export type StateType = {
 
 export default function SizeChart({ state, open, close }: StateType) {
     return (
-        <Modal show={state} close={close} data-testid="add-address-modal">
+        <Modal show={state} close={close}>
             <Modal.Title close={close}>
                 <h1 className="mb-2">Add address</h1>
             </Modal.Title>

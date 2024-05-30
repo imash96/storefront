@@ -2,7 +2,8 @@ import { medusaClient } from "@libs/config";
 import { getRegion } from "@libs/data";
 import HomeProduct from "../components/home-product";
 
-export default async function Promotion({ regionCode }: { regionCode: string }) {
+
+export default async function Sale({ regionCode }: { regionCode: string }) {
     const region = await getRegion(regionCode)
 
     if (!region) {
@@ -13,6 +14,6 @@ export default async function Promotion({ regionCode }: { regionCode: string }) 
         region_id: region.id
     })
     return (
-        <HomeProduct title="Trending Products" products={products} />
+        <HomeProduct title="Product on Sale !!!!" products={products} />
     )
 }

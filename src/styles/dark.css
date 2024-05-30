@@ -31,7 +31,7 @@
     --same-text: 255 255 255;
     --canvas: 27 27 31;
     --thumbnail: 247 246 251;
-    --boxes: 39 40 45;
+    --boxes: 24 24 26;
 
     --red-1: 225 69 58;
     --red-2: 225 105 97;
@@ -68,4 +68,8 @@
     --brown-2: 181 148 105;
 
     --bg-opacity: 0.15;
+
+    input {
+        color-scheme: dark;
+    }
 }

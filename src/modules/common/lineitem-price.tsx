@@ -20,7 +20,7 @@ const LineItemPrice = ({ item, region, style = "default" }: LineItemPriceProps) 
                     <>
                         <p>
                             {style === "default" && (
-                                <span className="text-ui-fg-subtle">Original: </span>
+                                <span className="text-grey-83">Original: </span>
                             )}
                             <span className="line-through text-grey-85">
                                 {formatAmount({
@@ -37,7 +37,7 @@ const LineItemPrice = ({ item, region, style = "default" }: LineItemPriceProps) 
                         )}
                     </>
                 )}
-                <span className={`text-sm leading-6 font-normal ${hasReducedPrice ? 'text-ui-fg-interactive' : ''}`}>
+                <span className={`text-sm leading-6 font-normal ${hasReducedPrice ? 'text-grey-84' : ''}`}>
                     {formatAmount({
                         amount: item.total || 0,
                         region: region,

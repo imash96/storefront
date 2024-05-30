@@ -2,7 +2,7 @@ import clsx from "@libs/utils/clsx"
 
 type ButtonProp = {
     className?: string
-    isLoading: boolean
+    isLoading?: boolean
     onClick?: () => void
     [x: string]: any
 } & React.PropsWithChildren

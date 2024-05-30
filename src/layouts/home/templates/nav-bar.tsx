@@ -16,7 +16,7 @@ export default function NavBar({ regions }: { regions: Region[] | null }) {
                     </ul>
                 </div>
                 <div className="hidden md:block md:w-6/12">
-                    {/* {regions && <CountrySelect regions={regions} />} */}
+                    {regions && <CountrySelect regions={regions} />}
                 </div>
             </div>
         </div>

@@ -16,10 +16,10 @@ export default function ProductInfo({ brand, title, description }: productInfoPr
                     Brand: {brand ? brand : 'Generic'}
                 </span>
                 <ProductRating />
-                <h2 className="text-3xl leading-10 tracking-tight font-bold text-xl md:text-2xl" data-testid="product-title">
+                <h2 className="text-3xl leading-10 tracking-tight font-bold text-xl md:text-2xl">
                     {title}
                 </h2>
-                <span className="text-sm text-grey-83" data-testid="product-description">
+                <span className="text-sm text-grey-83">
                     {description}
                 </span>
             </div>
