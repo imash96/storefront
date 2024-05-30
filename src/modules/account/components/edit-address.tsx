@@ -1,3 +1,5 @@
+"use client"
+
 import useToggleState from "@libs/hooks/use-toggle-state";
 import { Address } from "@medusajs/medusa";
 import { Region } from "@medusajs/medusa";
