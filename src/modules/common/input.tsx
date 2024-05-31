@@ -14,7 +14,7 @@ type InputProps = Omit<
 }
 
 export default forwardRef<HTMLInputElement, InputProps>(
-    function Input({ type, name, label, touched, required, topLabel, ...props }, ref) {
+    function Input({ type = 'text', name, label, touched, required, topLabel, ...props }, ref) {
         const inputRef = useRef<HTMLInputElement>(null)
         const [showPassword, setShowPassword] = useState(false)
         const [inputType, setInputType] = useState(type)

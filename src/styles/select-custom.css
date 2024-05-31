@@ -1,117 +1,34 @@
-.selection svg {
-    display: block;
-    width: 1em;
-    height: 1em;
-    fill: currentColor;
+.select ul.select-options li.selected {
+    background-color: rgb(var(--blue-1));
+    color: #FFFFFF;
 }
 
-.select {
-    position: relative;
-    display: inline-block;
+.select ul.select-options li.disabled {
+    color: #8A8A8A;
 }
 
-.select:focus {
-    outline: 0;
+.select ul.select-options li.disabled:hover {
+    background: #FFFFFF !important;
+    color: #8A8A8A !important;
 }
 
-.select:focus .selection {
-    box-shadow: 0 0 1px 1px #00a9e0;
+.select ul.select-options li:last-child {
+    border-bottom: none;
 }
 
-.label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-}
-
-.selection {
-    position: relative;
-    padding: 5px;
-    border: 1px solid #ddd;
-    background: #fff;
-}
-
-.value {
-    position: relative;
-    display: inline-block;
-    padding: 5px 10px;
-}
-
-.multiple {
-    padding-right: 30px;
-    margin-right: 5px;
-    background: #d9f2fb;
-    color: #00a9e0;
-}
-
-.delete {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    padding: 10px;
-    font-size: 10px;
+.select ul.select-options li:hover:not(.selected) {
+    background-color: rgb(var(--blue-4));
+    color: #ffffff;
     cursor: pointer;
 }
 
-.placeholder {
-    padding: 5px 10px;
-    color: #898989;
-}
-
-.arrow {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+.select .select-noresults {
+    color: #ccc;
+    cursor: default;
     display: block;
-    padding: 10px;
-    font-size: 10px;
-    color: #898989;
+    padding: 8px 10px;
 }
 
-.options {
-    position: absolute;
-    z-index: 2;
-    top: 100%;
-    left: 0;
-    right: 0;
-    border: solid #ddd;
-    border-width: 0 1px;
-    background: #fff;
-    max-height: 18rem;
-    overflow-y: scroll;
-}
-
-.options .disabled {
-    color: #8a8a8a;
-}
-
-.option {
-    padding: 10px 15px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-}
-
-.option.selected {
-    border: 1px solid #00a9e0;
-    background: rgb(var(--bg-subtle-color))
-}
-
-.checkbox {
-    content: "";
-    vertical-align: top;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    padding: 2px;
-    border: 1px solid #ddd;
-    border-radius: 2px;
-    margin: 2px 12px 0 0;
-    color: #fff;
-    font-size: 10px;
-}
-
-.selected .checkbox {
-    border-color: #007da6;
-    background: #00a9e0;
+.select.is-open svg {
+    transform: rotate(180deg);
 }

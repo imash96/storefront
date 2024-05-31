@@ -32,6 +32,7 @@ const config: Config = {
       black: "#000",
       white: "#fff",
       on: 'rgb(var(--on) / <alpha-value>)',
+      off: 'rgb(var(--off) / <alpha-value>)',
       main: 'rgb(var(--main) / <alpha-value>)',
       curtain: 'rgb(var(--curtain) / <alpha-value>)',
       sameBg: 'rgb(var(--same-bg) / <alpha-value>)',
