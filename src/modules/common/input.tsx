@@ -29,7 +29,7 @@ export default forwardRef<HTMLInputElement, InputProps>(
         useImperativeHandle(ref, () => inputRef.current!)
 
         return (
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col text-grey-81 w-full">
                 {topLabel && (
                     <span className="mb-2 text-sm font-medium leading-5">{topLabel}</span>
                 )}
@@ -39,7 +39,7 @@ export default forwardRef<HTMLInputElement, InputProps>(
                         name={name}
                         placeholder=" "
                         required={required}
-                        className={`pt-4 pb-1 block w-full h-11 px-4 mt-0 bg-grey-22 border rounded-md appearance-none focus:outline-none focus:ring-0 focus:shadow-sm hover:bg-grey-20 ${props.disabled ? "text-grey-81 border-grey-18" : props.errors ? "text-red-1 border-red-2 focus:border-red-3 focus:shadow-red-4/20 focus:ring-red-4/50" : "text-grey-81 border-grey-14 focus:border-blue-3 focus:shadow-blue-4/20 focus:ring-blue-4/50"}`}
+                        className={`pt-4 pb-1 block w-full h-11 px-4 mt-0 border rounded-md appearance-none focus:outline-none focus:ring-0 focus:shadow-sm ${props.disabled ? "border-grey-18 bg-grey-18" : props.errors ? "text-red-1 border-red-2 focus:border-red-3 focus:shadow-red-4/20 focus:ring-red-4/50 hover:bg-red-3/40 bg-red-3/20" : "border-grey-14 focus:border-blue-3 focus:shadow-blue-4/20 focus:ring-blue-4/50 hover:bg-grey-20 bg-grey-22"}`}
                         {...props}
                         ref={inputRef}
                     />

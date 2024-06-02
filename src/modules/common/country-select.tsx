@@ -5,6 +5,8 @@ import { useEffect, useMemo, useState } from "react"
 import { updateRegion } from "app/actions"
 import { useParams, usePathname } from "next/navigation"
 import CustomSelect from "./custom-select"
+import NativeSelect from "./native-select"
+import Divider from "./divider"
 
 type OptionProp = {
     value: string;
@@ -41,14 +43,86 @@ export default function CountrySelect({ regions }: CountrySelectProps) {
         updateRegion(value, currentPath)
     }
 
+    const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const { value } = e.currentTarget
+        updateRegion(value, currentPath)
+    }
+
     return (
         selected &&
-        <CustomSelect
-            options={options}
-            onChange={handleChange}
-            defaultValue={selected}
-            placeholder="Select Country"
-            isSearchable
-        />
+        <>
+            <span>Custom Select:</span>
+            <CustomSelect
+                name="select"
+                options={options}
+                onChange={handleChange}
+                defaultValue={selected}
+                placeholder="Select Country"
+                isSearchable
+                // errors={{
+                //     x: ''
+                // }}
+                disabled
+            />
+            <CustomSelect
+                name="select"
+                options={options}
+                onChange={handleChange}
+                defaultValue={selected}
+                placeholder="Select Country"
+                isSearchable
+                errors={{
+                    x: ''
+                }}
+            />
+            <CustomSelect
+                name="select"
+                options={options}
+                onChange={handleChange}
+                defaultValue={selected}
+                placeholder="Select Country"
+                isSearchable
+            />
+            <Divider />
+            <span>Native Select:</span>
+            <NativeSelect
+                name="select"
+                onChange={handleSelectChange}
+                value={selected.value}
+                placeholder="Select Country"
+                // errors={{
+                //     x: ''
+                // }}
+                disabled
+            >
+                {options.map((option, index) =>
+                    <option key={index} value={option.value}>{option.label}</option>
+                )}
+            </NativeSelect>
+            <NativeSelect
+                name="select"
+                onChange={handleSelectChange}
+                value={selected.value}
+                placeholder="Select Country"
+                errors={{
+                    x: ''
+                }}
+            >
+                {options.map((option, index) =>
+                    <option key={index} value={option.value}>{option.label}</option>
+                )}
+            </NativeSelect>
+            <NativeSelect
+                name="select"
+                onChange={handleSelectChange}
+                value={selected.value}
+                placeholder="Select Country"
+            >
+                {options.map((option, index) =>
+                    <option key={index} value={option.value}>{option.label}</option>
+                )}
+            </NativeSelect>
+        </>
+
     )
 }

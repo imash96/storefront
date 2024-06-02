@@ -52,7 +52,7 @@ export default async function HeaderContent() {
                 <ul className="flex h-full gap-8">
                     {main_category.map((category) => (
                         <li key={category.id} className="group flex">
-                            <button type="button" className="flex border-transparent relative z-10 -mb-px items-center pt-px text-sm font-medium transition-colors duration-200 ease-out group-hover:border-b-2 group-hover:border-blue-1 group-hover:text-blue-1" aria-expanded="false">
+                            <button type="button" className="flex border-transparent relative -mb-px items-center pt-px text-sm font-medium transition-colors duration-200 ease-out group-hover:border-b-2 group-hover:border-blue-1 group-hover:text-blue-1" aria-expanded="false">
                                 {category.name}
                                 <ChevronDown className='ml-1 h-4 w-4 group-hover:rotate-180' aria-hidden="true" />
                             </button>
@@ -99,7 +99,7 @@ export default async function HeaderContent() {
                     ))}
                     {Object.entries(pages).map(([name, href]) => (
                         <li key={name} className="relative flex">
-                            <LocalizedClientLink href={href} className="flex border-transparent relative z-10 -mb-px items-center hover:text-blue-1 hover:border-blue-1 hover:border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out">
+                            <LocalizedClientLink href={href} className="flex border-transparent relative -mb-px items-center hover:text-blue-1 hover:border-blue-1 hover:border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out">
                                 {name}
                             </LocalizedClientLink>
                         </li>
