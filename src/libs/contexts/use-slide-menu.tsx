@@ -1,8 +1,8 @@
 "use client"
 
 import { createContext, useContext } from "react"
-import useToggleState from "@libs/hooks/use-toggle-state"
-import { allowScroll, blockScroll } from "@libs/utils/toggle-scroll"
+import useToggleState from "@/libs/hooks/use-toggle-state"
+import { allowScroll, blockScroll } from "@/libs/utils/toggle-scroll"
 
 type SlideMenuContext = {
     menuState: boolean

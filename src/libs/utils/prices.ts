@@ -4,7 +4,7 @@ import { Region, Variant } from "types/medusa"
 
 import { isEmpty } from "./isEmpty"
 import { ProductVariantInfo, RegionInfo } from "../../types/global"
-import { noDivisionCurrencies } from "@libs/constants"
+import { noDivisionCurrencies } from "@/libs/constants"
 
 export const findCheapestRegionPrice = (
     variants: Variant[],

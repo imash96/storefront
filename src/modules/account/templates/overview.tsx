@@ -1,7 +1,7 @@
 import { Customer, Order } from "@medusajs/medusa"
-import { formatAmount } from "@libs/utils/prices"
-import LocalizedClientLink from "@modules/common/localized-client-link"
-import ChevronDown from "@icons/chevron-down"
+import { formatAmount } from "@/libs/utils/prices"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
+import ChevronDown from "@/icons/chevron-down"
 
 type OverviewProps = {
     customer: Omit<Customer, "password_hash"> | null

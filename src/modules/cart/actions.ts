@@ -14,7 +14,7 @@ import {
     removeItem,
     updateCart,
     updateItem,
-} from "@libs/data"
+} from "@/libs/data"
 
 /**
  * Retrieves the cart based on the cartId cookie

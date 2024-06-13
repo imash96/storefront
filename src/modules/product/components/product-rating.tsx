@@ -1,4 +1,4 @@
-import StarIcon from "@icons/star";
+import StarIcon from "@/icons/star";
 
 const product = {
     rating: 3.9,

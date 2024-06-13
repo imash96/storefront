@@ -1,5 +1,5 @@
-import { medusaClient } from "@libs/config";
-import { getRegion } from "@libs/data";
+import { medusaClient } from "@/libs/config";
+import { getRegion } from "@/libs/data";
 import HomeProduct from "../components/home-product";
 
 

@@ -1,7 +1,7 @@
-import MinusIcon from "@icons/minus";
-import PlusIcon from "@icons/plus";
-import Spinner from "@icons/spinner"
-import { updateLineItem } from "@modules/cart/actions";
+import MinusIcon from "@/icons/minus";
+import PlusIcon from "@/icons/plus";
+import Spinner from "@/icons/spinner"
+import { updateLineItem } from "@/modules/cart/actions";
 import { useState } from 'react'
 
 export default function CartEditQuantity({ lineId, quantity, type }: { lineId: string; quantity: number, type: 'plus' | 'minus'; }) {

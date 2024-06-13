@@ -1,5 +1,5 @@
-import Eye from "@icons/eye"
-import EyeOff from "@icons/eye-off"
+import Eye from "@/icons/eye"
+import EyeOff from "@/icons/eye-off"
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react"
 
 type InputProps = Omit<

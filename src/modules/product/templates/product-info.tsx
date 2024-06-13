@@ -1,4 +1,4 @@
-import LocalizedClientLink from "@modules/common/localized-client-link";
+import LocalizedClientLink from "@/modules/common/localized-client-link";
 import { ProductCollection } from "@medusajs/medusa";
 import ProductRating from "../components/product-rating";
 

@@ -1,7 +1,7 @@
-import ArrowRight from "@icons/arrow-right";
-import LocalizedClientLink from "@modules/common/localized-client-link";
+import ArrowRight from "@/icons/arrow-right";
+import LocalizedClientLink from "@/modules/common/localized-client-link";
 import CollectionContent from "../components/cols-content";
-import CreateSection from "@modules/common/create-section";
+import CreateSection from "@/modules/common/create-section";
 
 export default function Collection() {
     return (

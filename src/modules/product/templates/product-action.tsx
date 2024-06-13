@@ -6,12 +6,12 @@ import { isEqual } from "lodash"
 import { useParams } from "next/navigation"
 import { useEffect, useMemo, useState } from "react"
 
-import { addToCart } from "@modules/cart/actions"
+import { addToCart } from "@/modules/cart/actions"
 
-import Button from "@modules/common/button"
+import Button from "@/modules/common/button"
 import OptionSelect from "../components/option-select"
 import ProductPrice from "../components/product-price"
-import Spinner from "@icons/spinner"
+import Spinner from "@/icons/spinner"
 
 type ProductActionsProps = {
     product: PricedProduct

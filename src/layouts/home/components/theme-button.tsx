@@ -1,7 +1,7 @@
 "use client"
 
-import DarkModeIcon from "@icons/dark-mode";
-import LightModeIcon from "@icons/light-mode";
+import DarkModeIcon from "@/icons/dark-mode";
+import LightModeIcon from "@/icons/light-mode";
 import { useEffect, useState } from "react";
 
 type colorProp = "light" | "dark"

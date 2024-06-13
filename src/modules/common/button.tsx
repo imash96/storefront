@@ -1,4 +1,4 @@
-import clsx from "@libs/utils/clsx"
+import clsx from "@/libs/utils/clsx"
 
 type ButtonProp = {
     className?: string

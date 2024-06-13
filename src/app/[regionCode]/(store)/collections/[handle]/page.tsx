@@ -1,4 +1,4 @@
-import Collection from "@modules/collections";
+import Collection from "@/modules/collections";
 
 export type SortOptions = "price_asc" | "price_desc" | "created_at"
 

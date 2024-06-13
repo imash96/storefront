@@ -6,11 +6,11 @@ import ProductInfo from "./templates/product-info"
 import ProductActions from "./templates/product-action"
 import ProductInfoTab from "./components/tab-product-info"
 import ShippingInfoTab from "./components/tab-shipping-info"
-import Divider from "@modules/common/divider"
+import Divider from "@/modules/common/divider"
 import ProductHeader from "./templates/product-header"
-import CreateSection from "@modules/common/create-section"
-import Accordion from "@modules/common/accordion"
-import { uspData } from "@modules/home/templates/uspt"
+import CreateSection from "@/modules/common/create-section"
+import Accordion from "@/modules/common/accordion"
+import { uspData } from "@/modules/home/templates/uspt"
 
 type productProps = {
     product: PricedProduct

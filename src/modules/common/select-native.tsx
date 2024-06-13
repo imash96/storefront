@@ -1,4 +1,4 @@
-import clsx from '@libs/utils/clsx';
+import clsx from '@/libs/utils/clsx';
 import { forwardRef, useRef, useImperativeHandle } from 'react';
 
 export type NativeSelectProps = {

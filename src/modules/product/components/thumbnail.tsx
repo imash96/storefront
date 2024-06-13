@@ -1,7 +1,7 @@
 import { Image as MedusaImage } from "@medusajs/medusa"
-import PlaceholderImage from "@icons/placeholder-image"
+import PlaceholderImage from "@/icons/placeholder-image"
 import Image from "next/image"
-import clsx from "@libs/utils/clsx"
+import clsx from "@/libs/utils/clsx"
 
 type ThumbnailProps = {
     thumbnail?: string | null

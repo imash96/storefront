@@ -1,6 +1,6 @@
-import ArrowRight from "@icons/arrow-right"
-import { medusaClient } from "@libs/config"
-import LocalizedClientLink from "@modules/common/localized-client-link"
+import ArrowRight from "@/icons/arrow-right"
+import { medusaClient } from "@/libs/config"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
 import Image from "next/image"
 
 

@@ -1,6 +1,6 @@
 "use server"
 
-import { addShippingAddress, authenticate, createCustomer, deleteShippingAddress, getToken, updateCustomer, updateShippingAddress, } from "@libs/data"
+import { addShippingAddress, authenticate, createCustomer, deleteShippingAddress, getToken, updateCustomer, updateShippingAddress, } from "@/libs/data"
 import { revalidateTag } from "next/cache"
 import { redirect } from "next/navigation"
 import { cookies, headers } from "next/headers"

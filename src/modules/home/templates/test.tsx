@@ -1,6 +1,6 @@
 import TestimonalSlider from "../components/test-slider";
-import "@styles/testimonal.css";
-import CreateSection from "@modules/common/create-section";
+import "@/styles/testimonal.css";
+import CreateSection from "@/modules/common/create-section";
 
 export default function Testimonal() {
     return (

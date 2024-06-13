@@ -1,18 +1,18 @@
 "use client"
 
-import useToggleState from "@libs/hooks/use-toggle-state";
+import useToggleState from "@/libs/hooks/use-toggle-state";
 import { Address } from "@medusajs/medusa";
 import { Region } from "@medusajs/medusa";
 import { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import { deleteCustomerShippingAddress, updateCustomerShippingAddress } from "../actions";
-import clsx from "@libs/utils/clsx";
-import Spinner from "@icons/spinner";
-import PencilSquare from "@icons/pencilSquare";
-import TrashIcon from "@icons/trash";
-import Modal from "@modules/common/modal";
-import Input from "@modules/common/input";
-import Button from "@modules/common/button";
+import clsx from "@/libs/utils/clsx";
+import Spinner from "@/icons/spinner";
+import PencilSquare from "@/icons/pencilSquare";
+import TrashIcon from "@/icons/trash";
+import Modal from "@/modules/common/modal";
+import Input from "@/modules/common/input";
+import Button from "@/modules/common/button";
 
 type EditAddressProps = {
     region: Region

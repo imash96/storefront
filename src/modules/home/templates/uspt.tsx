@@ -1,9 +1,9 @@
-import Leather from "@icons/leather";
-import Payment from "@icons/payment";
-import Delivery from "@icons/delivery";
-import Return from "@icons/return";
+import Leather from "@/icons/leather";
+import Payment from "@/icons/payment";
+import Delivery from "@/icons/delivery";
+import Return from "@/icons/return";
 import { IconProps } from "types/icon";
-import CreateSection from "@modules/common/create-section";
+import CreateSection from "@/modules/common/create-section";
 
 export default function UniqueSellingPoint() {
     return (

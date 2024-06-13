@@ -1,8 +1,8 @@
 import { Region } from "@medusajs/medusa"
 import { PricedProduct } from "@medusajs/medusa/dist/types/pricing"
 
-import { getPercentageDiff } from "@libs/utils/get-precentage-diff"
-import { formatAmount } from "@libs/utils/prices"
+import { getPercentageDiff } from "@/libs/utils/get-precentage-diff"
+import { formatAmount } from "@/libs/utils/prices"
 import { ProductPreviewType } from "types/global"
 import { CalculatedVariant } from "types/medusa"
 

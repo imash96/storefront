@@ -1,5 +1,5 @@
-import LogoIcon from "@icons/logo";
-import LocalizedClientLink from "@modules/common/localized-client-link";
+import LogoIcon from "@/icons/logo";
+import LocalizedClientLink from "@/modules/common/localized-client-link";
 import Image from "next/image";
 
 export default function Layout({ children }: React.PropsWithChildren) {

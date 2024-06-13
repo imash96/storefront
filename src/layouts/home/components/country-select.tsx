@@ -1,9 +1,9 @@
 "use client"
 
-import ChevronDown from "@icons/chevron-down"
-import Spinner from "@icons/spinner"
+import ChevronDown from "@/icons/chevron-down"
+import Spinner from "@/icons/spinner"
 import { type Region } from "@medusajs/medusa"
-import useToggleState, { type StateType } from "@libs/hooks/use-toggle-state"
+import useToggleState, { type StateType } from "@/libs/hooks/use-toggle-state"
 import { useEffect, useMemo, useState } from "react"
 import ReactCountryFlag from "react-country-flag"
 import { useParams, usePathname } from "next/navigation"

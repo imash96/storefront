@@ -1,7 +1,7 @@
-import ArrowRight from "@icons/arrow-right";
+import ArrowRight from "@/icons/arrow-right";
 import { PricedProduct } from "@medusajs/medusa/dist/types/pricing";
-import CreateSection from "@modules/common/create-section";
-import LocalizedClientLink from "@modules/common/localized-client-link";
+import CreateSection from "@/modules/common/create-section";
+import LocalizedClientLink from "@/modules/common/localized-client-link";
 import Image from "next/image";
 
 type Props = {

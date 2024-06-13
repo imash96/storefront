@@ -1,9 +1,9 @@
 import { Cart } from "@medusajs/medusa";
-import DeleteButton from "@modules/common/delete-button";
-import LineItemOptions from "@modules/common/lineitem-options";
-import LineItemPrice from "@modules/common/lineitem-price";
-import LocalizedClientLink from "@modules/common/localized-client-link";
-import Thumbnail from "@modules/product/components/thumbnail";
+import DeleteButton from "@/modules/common/delete-button";
+import LineItemOptions from "@/modules/common/lineitem-options";
+import LineItemPrice from "@/modules/common/lineitem-price";
+import LocalizedClientLink from "@/modules/common/localized-client-link";
+import Thumbnail from "@/modules/product/components/thumbnail";
 import CartFooter from "./cart-footer";
 import CartRemoveButton from "./cart-remove-button";
 import CartEditQuantity from "./cart-quantity-button";

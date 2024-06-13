@@ -1,4 +1,4 @@
-import LocalizedClientLink from "@modules/common/localized-client-link"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
 
 type footerTop = {
     title: string

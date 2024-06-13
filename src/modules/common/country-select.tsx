@@ -4,8 +4,8 @@ import { Region } from "@medusajs/medusa"
 import { useEffect, useMemo, useState } from "react"
 import { updateRegion } from "app/actions"
 import { useParams, usePathname } from "next/navigation"
-import CustomSelect from "./custom-select"
-import NativeSelect from "./native-select"
+import CustomSelect from "./select-custom"
+import NativeSelect from "./select-native"
 import Divider from "./divider"
 
 type OptionProp = {
@@ -109,7 +109,7 @@ export default function CountrySelect({ regions }: CountrySelectProps) {
                 }}
             >
                 {options.map((option, index) =>
-                    <option key={index} value={option.value}>{option.label}</option>
+                    <option className="text-grey-81 bg-grey-18" key={index} value={option.value}>{option.label}</option>
                 )}
             </NativeSelect>
             <NativeSelect

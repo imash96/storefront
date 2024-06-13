@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { cookies } from 'next/headers'
-import "@styles/globals.css";
-import "@styles/light.css";
-import "@styles/dark.css";
+import "@/styles/globals.css";
+import "@/styles/light.css";
+import "@/styles/dark.css";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://localhost"
 

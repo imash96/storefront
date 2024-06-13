@@ -4,7 +4,7 @@ import { revalidateTag } from "next/cache"
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
 
-import { getRegion, updateCart } from "@libs/data"
+import { getRegion, updateCart } from "@/libs/data"
 
 /**
  * Updates the regionCode param and revalidates the regions cache

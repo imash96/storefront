@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import LoginTemplate from "@layouts/account/templates/login"
+import LoginTemplate from "@/layouts/account/templates/login"
 
 export const metadata: Metadata = {
     title: "Sign in",

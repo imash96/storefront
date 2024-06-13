@@ -3,14 +3,14 @@
 import { Customer } from "@medusajs/medusa"
 import { useParams, usePathname } from "next/navigation"
 
-import { signOut } from "@modules/account/actions"
-import LocalizedClientLink from "@modules/common/localized-client-link"
-import ChevronDown from "@icons/chevron-down"
-import UserIcon from "@icons/user"
-import MapPin from "@icons/map-pin"
-import Package from "@icons/package"
-import ArrowRight from "@icons/arrow-right"
-import clsx from "@libs/utils/clsx"
+import { signOut } from "@/modules/account/actions"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
+import ChevronDown from "@/icons/chevron-down"
+import UserIcon from "@/icons/user"
+import MapPin from "@/icons/map-pin"
+import Package from "@/icons/package"
+import ArrowRight from "@/icons/arrow-right"
+import clsx from "@/libs/utils/clsx"
 
 const AccountNav = ({
     customer,

@@ -1,5 +1,5 @@
-import CountrySelect from "@modules/common/country-select"
-import { listRegions } from "@libs/data"
+import CountrySelect from "@/modules/common/country-select"
+import { listRegions } from "@/libs/data"
 
 export default async function Page() {
     const regions = await listRegions()

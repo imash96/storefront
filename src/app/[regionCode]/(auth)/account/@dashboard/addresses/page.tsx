@@ -1,9 +1,9 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
-import AddressBook from "@modules/account/templates/address-book"
+import AddressBook from "@/modules/account/templates/address-book"
 
-import { getCustomer, getRegion } from "@libs/data"
+import { getCustomer, getRegion } from "@/libs/data"
 
 import { headers } from "next/headers"
 

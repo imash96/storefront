@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Autoplay } from "swiper/modules"
 import { Swiper, SwiperProps, SwiperSlide } from "swiper/react"
-import RatingSystem from "@modules/common/rating-system"
+import RatingSystem from "@/modules/common/rating-system"
 
 const SwiperConfig: SwiperProps = {
     speed: 900,

@@ -1,9 +1,9 @@
-import FeedbackIcon from "@icons/feedback";
-import CustomerIcon from "@icons/customer";
-import SupportIcon from "@icons/support";
-import HandcraftedIcon from "@icons/handcrafted";
+import FeedbackIcon from "@/icons/feedback";
+import CustomerIcon from "@/icons/customer";
+import SupportIcon from "@/icons/support";
+import HandcraftedIcon from "@/icons/handcrafted";
 import { IconProps } from "types/icon";
-import CreateSection from "@modules/common/create-section";
+import CreateSection from "@/modules/common/create-section";
 
 export default function PointOfDifference() {
     return (

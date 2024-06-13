@@ -1,6 +1,6 @@
 import AccountNav from "../components/account-nav"
 import { Customer } from "@medusajs/medusa"
-import UnderlineLink from "@modules/common/interactive-link"
+import UnderlineLink from "@/modules/common/interactive-link"
 
 interface AccountLayoutProps {
     customer: Omit<Customer, "password_hash"> | null

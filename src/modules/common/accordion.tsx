@@ -1,9 +1,9 @@
 "use client"
 
-import MinusIcon from "@icons/minus";
-import PlusIcon from "@icons/plus";
-import useToggleState from "@libs/hooks/use-toggle-state";
-import clsx from "@libs/utils/clsx";
+import MinusIcon from "@/icons/minus";
+import PlusIcon from "@/icons/plus";
+import useToggleState from "@/libs/hooks/use-toggle-state";
+import clsx from "@/libs/utils/clsx";
 
 type accordionProp = {
     title: string

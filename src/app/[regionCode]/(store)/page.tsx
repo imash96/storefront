@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import CARTBUTTON from "./button";
-import Home from "@modules/home";
+import Home from "@/modules/home";
 
 export const metadata: Metadata = {
   title: "Leather Lifestyle Store",

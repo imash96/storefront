@@ -1,16 +1,16 @@
-import ChevronDown from "@icons/chevron-down";
-import LogoIcon from "@icons/logo";
-import { medusaClient } from "@libs/config";
-import LocalizedClientLink from "@modules/common/localized-client-link";
+import ChevronDown from "@/icons/chevron-down";
+import LogoIcon from "@/icons/logo";
+import { medusaClient } from "@/libs/config";
+import LocalizedClientLink from "@/modules/common/localized-client-link";
 import { ProductCategory } from "types/medusa"
-import MagnifyingGlassIcon from "@icons/magnifying-glass";
-import ShoppingCartIcon from "@icons/shopping-cart";
-import UserIcon from "@icons/user";
+import MagnifyingGlassIcon from "@/icons/magnifying-glass";
+import ShoppingCartIcon from "@/icons/shopping-cart";
+import UserIcon from "@/icons/user";
 import { Suspense } from "react";
 import ThemeButton from "./theme-button";
 import CartButton from "./cart-button";
 import Image from "next/image";
-import { getRandomCategory, getRandomStyle } from "@libs/utils/get-random";
+import { getRandomCategory, getRandomStyle } from "@/libs/utils/get-random";
 
 export default async function HeaderContent() {
     const { product_categories } = await medusaClient.productCategories.list({

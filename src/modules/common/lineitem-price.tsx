@@ -1,6 +1,6 @@
-import { formatAmount } from "@libs/utils/prices"
+import { formatAmount } from "@/libs/utils/prices"
 import type { LineItem, Region } from "@medusajs/medusa"
-import { getPercentageDiff } from "@libs/utils/get-precentage-diff"
+import { getPercentageDiff } from "@/libs/utils/get-precentage-diff"
 import { CalculatedVariant } from "types/medusa"
 
 type LineItemPriceProps = {

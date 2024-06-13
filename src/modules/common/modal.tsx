@@ -1,4 +1,4 @@
-import XMarkIcon from "@icons/x-mark"
+import XMarkIcon from "@/icons/x-mark"
 import { useEffect } from "react"
 
 type ModalProps = {

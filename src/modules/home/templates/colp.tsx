@@ -1,6 +1,6 @@
-import { medusaClient } from "@libs/config"
-import CreateSection from "@modules/common/create-section"
-import LocalizedClientLink from "@modules/common/localized-client-link"
+import { medusaClient } from "@/libs/config"
+import CreateSection from "@/modules/common/create-section"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
 import Image from "next/image"
 
 export default async function CollectionPromotion() {

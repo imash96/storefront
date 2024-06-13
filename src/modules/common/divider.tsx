@@ -1,4 +1,4 @@
-import clsx from "@libs/utils/clsx"
+import clsx from "@/libs/utils/clsx"
 
 export default function Divider({ className }: { className?: string }) {
     return (

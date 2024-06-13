@@ -1,7 +1,7 @@
 "use client"
 
-import Bars3Icon from "@icons/3bar"
-import { useSlideMenu } from "@libs/contexts/use-slide-menu";
+import Bars3Icon from "@/icons/3bar"
+import { useSlideMenu } from "@/libs/contexts/use-slide-menu";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 

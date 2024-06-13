@@ -1,10 +1,10 @@
-import LocalizedClientLink from "@modules/common/localized-client-link"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
 import MobileMenuAction from "./mobile-menu-action"
 import MobileMenuContact from "./mobile-menu-contact"
 import MobileMenuTab from "./mobile-menu-tab"
-import { medusaClient } from "@libs/config"
+import { medusaClient } from "@/libs/config"
 import { ProductCategory } from "@medusajs/medusa"
-import { getRandomCategory } from "@libs/utils/get-random"
+import { getRandomCategory } from "@/libs/utils/get-random"
 import { pages } from "./header-content"
 
 export default async function MobileMenuServer() {

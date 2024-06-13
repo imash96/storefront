@@ -1,5 +1,5 @@
-import ShoppingCartIcon from "@icons/shopping-cart"
-import { retrieveCart } from "@modules/cart/actions"
+import ShoppingCartIcon from "@/icons/shopping-cart"
+import { retrieveCart } from "@/modules/cart/actions"
 
 const fetchCart = async () => {
     const cart = await retrieveCart()

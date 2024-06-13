@@ -1,9 +1,9 @@
 import type { ProductOption } from "@medusajs/medusa"
 import React from "react"
-import { onlyUnique } from "@libs/utils/only-unique"
-import clsx from "@libs/utils/clsx"
-import useToggleState from "@libs/hooks/use-toggle-state"
-import LocalizedClientLink from "@modules/common/localized-client-link"
+import { onlyUnique } from "@/libs/utils/only-unique"
+import clsx from "@/libs/utils/clsx"
+import useToggleState from "@/libs/hooks/use-toggle-state"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
 
 type OptionSelectProps = {
     option: ProductOption

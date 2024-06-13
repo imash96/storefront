@@ -1,8 +1,8 @@
 import { PricedProduct, PricedVariant } from "@medusajs/medusa/dist/types/pricing"
 
-import { getProductPrice } from "@libs/utils/get-product-price"
+import { getProductPrice } from "@/libs/utils/get-product-price"
 import { RegionInfo } from "types/global"
-import clsx from "@libs/utils/clsx"
+import clsx from "@/libs/utils/clsx"
 
 type productPriceProps = {
     product: PricedProduct,

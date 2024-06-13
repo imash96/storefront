@@ -1,4 +1,4 @@
-import { medusaClient } from "@libs/config"
+import { medusaClient } from "@/libs/config"
 
 
 export default async function Collection({ regionCode, handle }: { regionCode: string, handle: string }) {

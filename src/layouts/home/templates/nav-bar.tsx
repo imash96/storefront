@@ -1,6 +1,6 @@
 import { Region } from "@medusajs/medusa";
 import CountrySelect from "../components/country-select";
-import LocalizedClientLink from "@modules/common/localized-client-link";
+import LocalizedClientLink from "@/modules/common/localized-client-link";
 
 export default function NavBar({ regions }: { regions: Region[] | null }) {
     return (

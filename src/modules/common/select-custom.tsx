@@ -1,11 +1,11 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react";
-import ChevronDown from "@icons/chevron-down";
-import useToggleState from "@libs/hooks/use-toggle-state";
+import ChevronDown from "@/icons/chevron-down";
+import useToggleState from "@/libs/hooks/use-toggle-state";
 import Input from "./input";
 
-import "@styles/select-custom.css"
+import "@/styles/select-custom.css"
 
 type OptionProp = {
     value: string;
@@ -33,6 +33,10 @@ export default function CustomSelect({ options, placeholder, defaultValue, disab
     const { state, open, close, toggle } = useToggleState()
 
     const onClickOption = (option: OptionProp) => {
+        if (option.value == selected.value) {
+            close()
+            return
+        }
         setSelected(option)
         onChange(option.value)
         close()
@@ -79,15 +83,15 @@ export default function CustomSelect({ options, placeholder, defaultValue, disab
     };
 
     const handleClickOutside = (event: MouseEvent) => {
-        if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
-            close();
-        }
+        (selectRef.current && !selectRef.current.contains(event.target as Node)) && close();
     }
 
     useEffect(() => {
         document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("scroll", close);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("scroll", close);
         };
     });
 
@@ -95,7 +99,7 @@ export default function CustomSelect({ options, placeholder, defaultValue, disab
         <div ref={selectRef} className={`select flex flex-col select-none w-full relative text-base font-normal leading-5 text-grey-81 ${state ? 'is-open' : ''}`} onKeyDown={handleKeyDown}>
             <input type="text" className="hidden" name={name} required value={selected.value} />
             <span onClick={handleClick}
-                className={`select-current w-full flex-wrap inline-flex content-center px-4 justify-between h-11 border rounded-md appearance-none focus:outline-none focus:ring-0 focus:shadow-sm ${disabled ? "border-grey-18 bg-grey-18 text-grey-84" : props.errors ? "text-red-1 border-red-2 focus:border-red-3 focus:shadow-red-4/20 focus:ring-red-4/50 hover:bg-red-3/40 bg-red-3/20" : "border-grey-14 focus:border-blue-3 focus:shadow-blue-4/20 focus:ring-blue-4/50 hover:bg-grey-20 bg-grey-22"}`}
+                className={`select-current w-full flex-wrap inline-flex content-center px-4 justify-between h-11 border rounded-md appearance-none focus:outline-none focus:ring-0 focus:shadow-sm ${disabled ? "border-grey-18 bg-grey-18 text-grey-85" : props.errors ? "text-red-1 border-red-2 focus:border-red-3 focus:shadow-red-4/20 focus:ring-red-4/50 hover:bg-red-3/40 bg-red-3/20" : "border-grey-14 focus:border-blue-3 focus:shadow-blue-4/20 focus:ring-blue-4/50 hover:bg-grey-20 bg-grey-22"}`}
             >
                 {selected.label}
                 {!disabled && <ChevronDown />}

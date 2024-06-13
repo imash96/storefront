@@ -1,6 +1,6 @@
-import useToggleState from "@libs/hooks/use-toggle-state";
-import Button from "@modules/common/button";
-import Modal from "@modules/common/modal";
+import useToggleState from "@/libs/hooks/use-toggle-state";
+import Button from "@/modules/common/button";
+import Modal from "@/modules/common/modal";
 
 export type StateType = {
     state: boolean

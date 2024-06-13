@@ -1,6 +1,6 @@
-import DeliveryIcon from "@icons/delivery"
-import ExchangeIcon from "@icons/excahnge"
-import ReturnIcon from "@icons/return"
+import DeliveryIcon from "@/icons/delivery"
+import ExchangeIcon from "@/icons/excahnge"
+import ReturnIcon from "@/icons/return"
 
 export default function ShippingInfoTab() {
     return (

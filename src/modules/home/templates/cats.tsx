@@ -1,7 +1,7 @@
-import LocalizedClientLink from "@modules/common/localized-client-link"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
 import CategoryContent from "../components/cats-content"
-import ArrowRight from "@icons/arrow-right"
-import CreateSection from "@modules/common/create-section"
+import ArrowRight from "@/icons/arrow-right"
+import CreateSection from "@/modules/common/create-section"
 
 
 export default function Category() {

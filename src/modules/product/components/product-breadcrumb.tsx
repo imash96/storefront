@@ -1,6 +1,6 @@
-import AngleRight from "@icons/angle-right";
-import HomeIcon from "@icons/home";
-import LocalizedClientLink from "@modules/common/localized-client-link";
+import AngleRight from "@/icons/angle-right";
+import HomeIcon from "@/icons/home";
+import LocalizedClientLink from "@/modules/common/localized-client-link";
 
 export default function ProductBreadcrumb({ cat }: any) {
 

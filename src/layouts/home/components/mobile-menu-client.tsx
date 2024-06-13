@@ -1,12 +1,12 @@
 "use client"
 
-import XMarkIcon from "@icons/x-mark"
-import { useSlideMenu } from "@libs/contexts/use-slide-menu"
+import XMarkIcon from "@/icons/x-mark"
+import { useSlideMenu } from "@/libs/contexts/use-slide-menu"
 import { Region } from "@medusajs/medusa"
 import CountrySelect from "./country-select"
-import LocalizedClientLink from "@modules/common/localized-client-link"
-import UserIcon from "@icons/user"
-import Search from "@icons/search"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
+import UserIcon from "@/icons/user"
+import Search from "@/icons/search"
 
 
 export default function MobileMenuClient({ children, regions }: { regions: Region[] | null } & React.PropsWithChildren) {

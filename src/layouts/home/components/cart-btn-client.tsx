@@ -1,6 +1,6 @@
 "use client"
 
-import { useSlideMenu } from "@libs/contexts/use-slide-menu"
+import { useSlideMenu } from "@/libs/contexts/use-slide-menu"
 
 export default function CartButtonClient({ children }: React.PropsWithChildren) {
     const { cartMenuOpen } = useSlideMenu()

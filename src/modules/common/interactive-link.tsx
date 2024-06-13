@@ -1,4 +1,4 @@
-import ArrowRight from "@icons/arrow-right"
+import ArrowRight from "@/icons/arrow-right"
 import LocalizedClientLink from "./localized-client-link"
 
 type InteractiveLinkProps = {

@@ -1,7 +1,7 @@
-import { getProductByHandle, getRegion, retrievePricedProductById } from "@libs/data";
+import { getProductByHandle, getRegion, retrievePricedProductById } from "@/libs/data";
 import { notFound } from "next/navigation";
 import type { Region } from "@medusajs/medusa"
-import Product from "@modules/product";
+import Product from "@/modules/product";
 
 type Props = {
     params: {

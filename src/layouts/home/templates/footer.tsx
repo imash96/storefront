@@ -1,6 +1,6 @@
 import FooterTop from '../components/footer-top'
 import FooterBottom from '../components/footer-bottom'
-import MailIcon from "@icons/mail"
+import MailIcon from "@/icons/mail"
 
 export default function Footer() {
     return (

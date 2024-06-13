@@ -1,9 +1,9 @@
-import ErrorMessage from "@modules/common/error-message"
+import ErrorMessage from "@/modules/common/error-message"
 import { LOGIN_VIEW } from "../templates/login"
 import { useFormState } from "react-dom"
-import { logCustomerIn } from "@modules/account/actions"
-import Input from "@modules/common/input"
-import Button from "@modules/common/button"
+import { logCustomerIn } from "@/modules/account/actions"
+import Input from "@/modules/common/input"
+import Button from "@/modules/common/button"
 
 type Props = {
     setCurrentView: (view: LOGIN_VIEW) => void

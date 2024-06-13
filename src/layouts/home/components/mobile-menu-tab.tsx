@@ -3,7 +3,7 @@
 import { ProductCategory } from "@medusajs/medusa";
 import { useState } from "react";
 import MobileMenuAction from "./mobile-menu-action";
-import LocalizedClientLink from "@modules/common/localized-client-link";
+import LocalizedClientLink from "@/modules/common/localized-client-link";
 import { features, featuresType } from "./header-content";
 import Image from "next/image";
 

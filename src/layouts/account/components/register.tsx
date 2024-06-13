@@ -1,10 +1,10 @@
-import Input from "@modules/common/input"
+import Input from "@/modules/common/input"
 import { LOGIN_VIEW } from "../templates/login"
-import ErrorMessage from "@modules/common/error-message"
-import LocalizedClientLink from "@modules/common/localized-client-link"
-import Button from "@modules/common/button"
+import ErrorMessage from "@/modules/common/error-message"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
+import Button from "@/modules/common/button"
 import { useFormState } from "react-dom"
-import { signUp } from "@modules/account/actions"
+import { signUp } from "@/modules/account/actions"
 
 type Props = {
     setCurrentView: (view: LOGIN_VIEW) => void

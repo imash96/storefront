@@ -1,4 +1,4 @@
-import HomeLayout from "@layouts/home"
+import HomeLayout from "@/layouts/home"
 import { Metadata } from "next"
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://localhost"

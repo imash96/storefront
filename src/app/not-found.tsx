@@ -1,5 +1,5 @@
-import ArrowRight from "@icons/arrow-right"
-import LocalizedClientLink from "@modules/common/localized-client-link"
+import ArrowRight from "@/icons/arrow-right"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
 import type { PricedProduct } from "@medusajs/medusa/dist/types/pricing"
-import { formatAmount } from "@libs/utils/prices"
+import { formatAmount } from "@/libs/utils/prices"
 import type { RegionInfo } from "types/global"
 import type { CalculatedVariant } from "types/medusa"
 

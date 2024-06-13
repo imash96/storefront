@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 
-import { getCustomer, listCustomerOrders } from "@libs/data"
+import { getCustomer, listCustomerOrders } from "@/libs/data"
 import { notFound } from "next/navigation"
-import Overview from "@modules/account/templates/overview"
+import Overview from "@/modules/account/templates/overview"
 
 export const metadata: Metadata = {
     title: "Account",

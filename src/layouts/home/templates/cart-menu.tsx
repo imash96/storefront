@@ -1,8 +1,8 @@
 "use client"
 
-import XMarkIcon from "@icons/x-mark"
-import { useSlideMenu } from "@libs/contexts/use-slide-menu"
-import CartIcon from "@icons/cart-icon"
+import XMarkIcon from "@/icons/x-mark"
+import { useSlideMenu } from "@/libs/contexts/use-slide-menu"
+import CartIcon from "@/icons/cart-icon"
 import type { Cart } from "@medusajs/medusa"
 import CartMenuContent from "../components/cart-menu-content"
 import CartExploreButton from "../components/cart-explore-button"

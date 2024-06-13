@@ -1,6 +1,6 @@
-import CloseIcon from "@icons/close"
-import Spinner from "@icons/spinner"
-import { deleteLineItem } from "@modules/cart/actions";
+import CloseIcon from "@/icons/close"
+import Spinner from "@/icons/spinner"
+import { deleteLineItem } from "@/modules/cart/actions";
 import { useState } from 'react'
 
 type buttonProp = {

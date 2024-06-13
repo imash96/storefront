@@ -1,7 +1,7 @@
 "use client"
 
-import Spinner from "@icons/spinner"
-import { addToCart } from "@modules/cart/actions"
+import Spinner from "@/icons/spinner"
+import { addToCart } from "@/modules/cart/actions"
 import { useState } from "react"
 
 

@@ -1,8 +1,8 @@
 import { Cart } from "@medusajs/medusa"
-import { formatAmount } from "@libs/utils/prices"
-import LocalizedClientLink from "@modules/common/localized-client-link"
-import Button from "@modules/common/button"
-import ArrowRight from "@icons/arrow-right"
+import { formatAmount } from "@/libs/utils/prices"
+import LocalizedClientLink from "@/modules/common/localized-client-link"
+import Button from "@/modules/common/button"
+import ArrowRight from "@/icons/arrow-right"
 import CartExploreButton from "./cart-explore-button"
 
 type cartContent = {

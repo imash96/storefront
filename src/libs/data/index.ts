@@ -13,13 +13,13 @@ import {
 import { PricedProduct } from "@medusajs/medusa/dist/types/pricing"
 import { cache } from "react"
 
-import sortProducts from "@libs/utils/sort-products"
-import transformProductPreview from "@libs/utils/transform-product-preview"
-// import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
+import sortProducts from "@/libs/utils/sort-products"
+import transformProductPreview from "@/libs/utils/transform-product-preview"
+// import { SortOptions } from "@/modules/store/components/refinement-list/sort-products"
 import { ProductCategoryWithChildren, ProductPreviewType } from "types/global"
 
-import { medusaClient } from "@libs/config"
-import medusaError from "@libs/utils/medusa-error"
+import { medusaClient } from "@/libs/config"
+import medusaError from "@/libs/utils/medusa-error"
 import { cookies } from "next/headers"
 
 const emptyResponse = {

@@ -1,8 +1,8 @@
 import { useState } from "react"
 
-import { deleteLineItem } from "@modules/cart/actions"
-import Spinner from "@icons/spinner"
-import TrashIcon from "@icons/trash"
+import { deleteLineItem } from "@/modules/cart/actions"
+import Spinner from "@/icons/spinner"
+import TrashIcon from "@/icons/trash"
 
 const DeleteButton = ({
     id,
