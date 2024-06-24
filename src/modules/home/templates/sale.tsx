@@ -14,6 +14,6 @@ export default async function Sale({ regionCode }: { regionCode: string }) {
         region_id: region.id
     })
     return (
-        <HomeProduct title="Product on Sale !!!!" products={products} />
+        <HomeProduct title="Product on Sale !!!!" products={products} href="/collections/product-on-sale" />
     )
 }

@@ -2,7 +2,6 @@ import ArrowRight from "@/icons/arrow-right";
 import { medusaClient } from "@/libs/config";
 import LocalizedClientLink from "@/modules/common/localized-client-link";
 import Image from "next/image";
-import Link from "next/link";
 
 export default async function CategoryContent() {
     const { product_categories } = await medusaClient.productCategories.list({ parent_category_id: "null" }, { next: { tags: ["category"] } })

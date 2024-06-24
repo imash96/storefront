@@ -14,6 +14,6 @@ export default async function NewArrival({ regionCode }: { regionCode: string })
         // collection_id: [""]
     })
     return (
-        <HomeProduct title="New Arrivals" products={products} />
+        <HomeProduct title="New Arrivals" products={products} href="/collections/new-arrivals" />
     )
 }

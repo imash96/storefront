@@ -11,7 +11,7 @@ type ThumbnailProps = {
     className?: string
 }
 
-function Thumbnail({ thumbnail, images, size = "small", isFeatured, className }: ThumbnailProps) {
+export default function Thumbnail({ thumbnail, images, size = "small", isFeatured, className }: ThumbnailProps) {
     const initialImage = thumbnail || images?.[0]?.url
 
     return (
@@ -54,5 +54,3 @@ function ImageOrPlaceholder({ image, size, }: Pick<ThumbnailProps, "size"> & { i
         </div>
     )
 }
-
-export default Thumbnail

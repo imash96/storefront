@@ -5,7 +5,7 @@ function toVal(mix: ClassValue) {
 
     if (typeof mix === 'string' || typeof mix === 'number') {
         str += mix;
-    } else if (mix && typeof mix === 'object') {
+    } else if (typeof mix === 'object') {
         if (Array.isArray(mix)) {
             var len = mix.length;
             for (k = 0; k < len; k++) {
@@ -18,7 +18,7 @@ function toVal(mix: ClassValue) {
             }
         } else {
             for (y in mix) {
-                if (mix[y]) {
+                if (mix && mix[y]) {
                     str && (str += ' ');
                     str += y;
                 }

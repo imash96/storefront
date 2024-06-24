@@ -13,6 +13,6 @@ export default async function Promotion({ regionCode }: { regionCode: string }) 
         region_id: region.id
     })
     return (
-        <HomeProduct title="Trending Products" products={products} />
+        <HomeProduct title="Trending Products" products={products} href="/collections/trending-products" />
     )
 }

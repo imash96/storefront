@@ -7,6 +7,9 @@ export default async function Collection({ regionCode, handle }: { regionCode: s
     })
     const collection = collections[0]
     return (
-        <div>{regionCode}: {JSON.stringify(collection)}</div>
+        <>
+            <div>{handle}</div>
+            <div>{regionCode}: {JSON.stringify(collection)}</div>
+        </>
     )
 }

@@ -3,20 +3,22 @@ import { PricedProduct } from "@medusajs/medusa/dist/types/pricing";
 import CreateSection from "@/modules/common/create-section";
 import LocalizedClientLink from "@/modules/common/localized-client-link";
 import Image from "next/image";
+import { Product } from "@medusajs/medusa";
 
 type Props = {
     title: string,
-    products: PricedProduct[]
+    href: string,
+    products: PricedProduct[] | Product[]
 }
 
-export default function HomeProduct({ title, products }: Props) {
+export default function HomeProduct({ title, products, href }: Props) {
     return (
         <CreateSection sectionName="trending">
             <div className="xs:flex xs:items-center xs:justify-between">
                 <h2 id="favorites-heading" className="text-2xl font-bold tracking-tight text-grey-81">
                     {title}
                 </h2>
-                <LocalizedClientLink href="/collections/trending-products" className="flex gap-x-1 items-center group text-sm font-medium text-indigo-1 hover:text-indigo-2">
+                <LocalizedClientLink href={href} className="flex gap-x-1 items-center group text-sm font-medium text-indigo-1 hover:text-indigo-2">
                     View all
                     <ArrowRight className="-rotate-45 group-hover:rotate-0" />
                 </LocalizedClientLink>
@@ -39,9 +41,12 @@ export default function HomeProduct({ title, products }: Props) {
                                 {product.title}
                             </LocalizedClientLink>
                         </h3>
-                        <p className="mt-1 text-sm font-medium text-grey-83">
-                            {product.variants[0].calculated_price_incl_tax}
-                        </p>
+                        {product.variants &&
+                            <p className="mt-1 text-sm font-medium text-grey-83">
+                                {product.variants[0].calculated_price_incl_tax && product.variants[0].calculated_price_incl_tax}
+                            </p>
+                        }
+
                     </div>
                 ))}
             </div>
