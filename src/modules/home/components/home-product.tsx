@@ -43,7 +43,7 @@ export default function HomeProduct({ title, products, href }: Props) {
                         </h3>
                         {product.variants &&
                             <p className="mt-1 text-sm font-medium text-grey-83">
-                                {product.variants[0].calculated_price_incl_tax && product.variants[0].calculated_price_incl_tax}
+                                {/* {product.variants[0].calculated_price_incl_tax && product.variants[0].calculated_price_incl_tax} */}
                             </p>
                         }
 
