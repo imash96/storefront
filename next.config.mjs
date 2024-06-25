@@ -29,7 +29,7 @@ const nextConfig = withStoreConfig({
             },
             {
                 protocol: "https",
-                hostname: "backend-file-service.s3.us-east-2.amazonaws.com/",
+                hostname: "backend-file-service.s3.us-east-2.amazonaws.com",
             },
             {
                 protocol: "https",
