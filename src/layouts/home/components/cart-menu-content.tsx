@@ -11,15 +11,15 @@ export default function CartMenuContent({ cart }: { cart: Omit<Cart, "beforeInse
     return (
         <>
             <div className="overflow-y-auto mb-auto">
-                <ul role="list" className="grid px-1 xs:px-3 sm:px-2">
+                <ul role="list" className="px-1 xs:px-3 sm:px-2">
                     {cart.items.sort((a, b) => { return a.created_at > b.created_at ? -1 : 1 }).map((item) => (
-                        <li key={item.id} className="flex px-2 py-2 rounded-sm bg-grey-20 border-b border-grey-17">
+                        <li key={item.id} className="flex p-2 rounded-sm bg-grey-20 border-b border-grey-17">
                             <div className="relative">
-                                <Thumbnail thumbnail={item.thumbnail} size="cart" className="bg-thumbnail rounded-md border border-grey-18" />
+                                <Thumbnail thumbnail={item.thumbnail} size="cart" className="bg-white rounded-md border border-grey-18" />
                                 <CartRemoveButton itemId={item.id} type='default' className="absolute z-25 top-0 right-0 -mt-1.5 -mr-1.5" />
                             </div>
                             <LocalizedClientLink href={`/product/${item.variant.product.handle}`} className="ml-2 py-1 w-full">
-                                <h3 className="leading-tight text-truncate font-semibold">{item.title}</h3>
+                                <h3 className="leading-tight text-sm font-semibold truncate-text">{item.title}</h3>
                                 <LineItemOptions variant={item.variant} quantity={item.quantity} />
                             </LocalizedClientLink>
                             <div className="flex flex-col justify-between py-1">

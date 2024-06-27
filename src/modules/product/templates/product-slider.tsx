@@ -18,7 +18,7 @@ export default function ProductSlider({ images }: { images: MedusaImage[] }) {
     return (
         <>
             <div className="flex-1">
-                <Swiper thumbs={{ swiper: thumbsSwiper }} {...SwiperConfigMain} className="mainSwiper image-gallery rounded-sm shadow-sm shadow-grey-84 bg-grey-19">
+                <Swiper thumbs={{ swiper: thumbsSwiper }} {...SwiperConfigMain} className="mainSwiper image-gallery rounded-sm shadow-sm shadow-grey-84 bg-white">
                     {images.map((image, index) => (
                         <SwiperSlide key={image.id} className="aspect-w-3 aspect-h-4">
                             <div className="swiper-zoom-container p-2">
@@ -41,7 +41,7 @@ export default function ProductSlider({ images }: { images: MedusaImage[] }) {
             <div className="">
                 <Swiper onSwiper={setThumbsSwiper} {...SwiperConfigThumb} className="thumbSwiper h-24 md:h-full">
                     {images.map((image, index) => (
-                        <SwiperSlide key={image.id} className="border-solid border border-grey-18 rounded-md bg-grey-19">
+                        <SwiperSlide key={image.id} className="border-solid border border-grey-18 rounded-md bg-white">
                             <Image
                                 src={image.url}
                                 alt={`Product thumbnail ${index + 1}`}

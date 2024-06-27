@@ -8,14 +8,14 @@ import { useState } from "react"
 export default function CARTBUTTON({ regionCode, className }: { regionCode: string, className: string }) {
     const [isAdding, setIsAdding] = useState(false)
     const variantIds = [
-        'variant_01HWF8D5W722TJVCRVSBAHCF7Z',
-        'variant_01HWF8E1N7WWB9MCDZ0QESVDD7',
-        'variant_01HWF8EG9MXQ8PHZT0X43F7XWY',
-        'variant_01HWF8EYYFGJRKDCXG2523GSHB',
-        'variant_01HWF8FDYVEN4A4S23BRGSD13E',
-        'variant_01HWF8FWFPTDRNT8GG313P5AY5',
-        'variant_01HWF8GB2J1XBRTBD1JPWHYFKF',
-        'variant_01HWF8FZAXJJNBWQJBA3PV9CSP'
+        'variant_01J17H38E53ZVMVF92RB4D544B',
+        'variant_01J17H244YKMDTNECW96QDSG01',
+        'variant_01J17H0M1T5M3HHJESKT03CRSS',
+        'variant_01J17GZJKRJ8FP6B53VNGHX903',
+        'variant_01J17GY9Y1KRBV4386MGW1NFGB',
+        'variant_01J17GX4J0RZM895FGESFTVKVX',
+        'variant_01J17GW4A2901GG4B99D8NQT61',
+        'variant_01J17GTVQZDVNDBRZN9DZW29GG'
     ]
     const variantId = variantIds[Math.floor(Math.random() * variantIds.length)]
     const quantity = 1
